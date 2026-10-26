@@ -4,12 +4,12 @@ Verification Test Suite: Admin Product Management.
 from fastapi import HTTPException
 from pydantic import ValidationError
 
-from backend.app.db.mongo import db_manager
-from backend.app.db.seed import seed_database
-from backend.app.repositories import products_repo, finishes_repo, audit_repo
-from backend.app.models.product import FanProductCreate, FanProductUpdate
-from backend.app.models.specifications import FanSpecifications
-from backend.app.api.routes.admin.products import (
+from app.db.mongo import db_manager
+from app.db.seed import seed_database
+from app.repositories import products_repo, finishes_repo, audit_repo
+from app.models.product import FanProductCreate, FanProductUpdate
+from app.models.specifications import FanSpecifications
+from app.api.routes.admin.products import (
     create_product,
     list_products,
     get_product,

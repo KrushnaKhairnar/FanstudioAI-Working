@@ -2,7 +2,7 @@
 Variant repository for managing fan motor + blade combinations.
 """
 from typing import Any, Dict, List, Optional
-from backend.app.repositories.base import BaseRepository, utc_now
+from app.repositories.base import BaseRepository, utc_now
 
 
 class VariantsRepository(BaseRepository):

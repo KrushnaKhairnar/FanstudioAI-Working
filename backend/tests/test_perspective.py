@@ -4,7 +4,7 @@ Verification Test Suite for Perspective & Lighting Pipeline (Perspective + light
 import numpy as np
 import cv2
 
-from backend.app.services.perspective_lighting import (
+from app.services.perspective_lighting import (
     apply_lighting_and_color_temperature,
     generate_ceiling_drop_shadow,
     transform_and_composite_fan,

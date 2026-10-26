@@ -4,19 +4,19 @@ Verification Test Suite: Variant Management (Combinations enforced).
 import uuid
 from fastapi import HTTPException
 
-from backend.app.db.mongo import db_manager
-from backend.app.db.seed import seed_database
-from backend.app.repositories import (
+from app.db.mongo import db_manager
+from app.db.seed import seed_database
+from app.repositories import (
     products_repo,
     finishes_repo,
     variants_repo,
     audit_repo,
 )
-from backend.app.models.product import FanProductCreate
-from backend.app.models.specifications import FanSpecifications
-from backend.app.models.variant import FanVariantCreate, FanVariantUpdate
-from backend.app.api.routes.admin.products import create_product
-from backend.app.api.routes.admin.variants import (
+from app.models.product import FanProductCreate
+from app.models.specifications import FanSpecifications
+from app.models.variant import FanVariantCreate, FanVariantUpdate
+from app.api.routes.admin.products import create_product
+from app.api.routes.admin.variants import (
     create_variant,
     batch_create_variants,
     list_product_variants,

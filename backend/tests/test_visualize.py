@@ -5,14 +5,14 @@ import os
 import cv2
 from fastapi import HTTPException
 
-from backend.app.db.mongo import db_manager
-from backend.app.db.seed import seed_database
-from backend.app.repositories import (
+from app.db.mongo import db_manager
+from app.db.seed import seed_database
+from app.repositories import (
     products_repo,
     variants_repo,
     ai_jobs_repo,
 )
-from backend.app.api.routes.users.visualize import (
+from app.api.routes.users.visualize import (
     create_visualization_job,
     get_visualization_job,
     get_visualization_result,
@@ -31,7 +31,7 @@ def run_visualize_verification():
 
     # Get sample active product and variant
     import uuid
-    from backend.app.repositories import finishes_repo
+    from app.repositories import finishes_repo
     products = products_repo.find_active()
     assert len(products) > 0, "Active products required"
     prod = None

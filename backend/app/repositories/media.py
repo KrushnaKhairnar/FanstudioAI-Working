@@ -2,7 +2,7 @@
 Media repository for managing fan imagery, cutouts, and renders.
 """
 from typing import Any, Dict, List, Optional
-from backend.app.repositories.base import BaseRepository, utc_now
+from app.repositories.base import BaseRepository, utc_now
 
 
 class MediaRepository(BaseRepository):

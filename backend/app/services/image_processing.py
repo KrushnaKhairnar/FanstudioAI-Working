@@ -10,8 +10,9 @@ from typing import Tuple, Dict, Any, List
 import numpy as np
 import cv2
 from PIL import Image, ImageOps
+from app.core.config import settings
 
-ROOMS_DIR = os.path.join(os.getcwd(), "data", "rooms")
+ROOMS_DIR = os.path.join(settings.DATA_DIR, "rooms")
 os.makedirs(ROOMS_DIR, exist_ok=True)
 
 MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024  # 10MB per UI specification

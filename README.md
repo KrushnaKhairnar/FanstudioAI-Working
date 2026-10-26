@@ -1,20 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# FanStudio AI
 
-# Run and deploy your AI Studio app
+## Run
 
-This contains everything you need to run your app locally.
+```bash
+# MongoDB
+cd backend && docker compose up -d
 
-View your app in AI Studio: https://ai.studio/apps/0bd45f59-653f-499f-9326-90dc8cd553d6
+# Backend (from backend/)
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env
+uvicorn app.main:app --reload --port 8000
 
-## Run Locally
+# Frontend (from frontend/)
+npm install
+cp .env.example .env
+npm run dev
+```
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+API: http://127.0.0.1:8000/docs — UI: http://localhost:3000

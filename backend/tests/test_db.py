@@ -1,8 +1,8 @@
 """
 Verification Test Suite: Database Design, Collections, & Index Strategy.
 """
-from backend.app.db.mongo import db_manager
-from backend.app.repositories import (
+from app.db.mongo import db_manager
+from app.repositories import (
     products_repo,
     finishes_repo,
     variants_repo,

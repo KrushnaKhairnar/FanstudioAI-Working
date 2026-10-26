@@ -8,13 +8,13 @@ from typing import List, Optional, Dict, Any
 from fastapi import APIRouter, HTTPException, Query, status
 from pydantic import BaseModel, Field
 
-from backend.app.repositories import (
+from app.repositories import (
     products_repo,
     finishes_repo,
     variants_repo,
     audit_repo,
 )
-from backend.app.models.variant import (
+from app.models.variant import (
     FanVariant,
     FanVariantCreate,
     FanVariantUpdate,

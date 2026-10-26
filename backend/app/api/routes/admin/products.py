@@ -8,17 +8,17 @@ from typing import List, Optional, Literal, Dict, Any
 from fastapi import APIRouter, HTTPException, Query, status
 from pydantic import BaseModel, Field
 
-from backend.app.repositories import (
+from app.repositories import (
     products_repo,
     finishes_repo,
     audit_repo,
 )
-from backend.app.models.product import (
+from app.models.product import (
     FanProduct,
     FanProductCreate,
     FanProductUpdate,
 )
-from backend.app.db.mongo import DEFAULT_MOTOR_COLORS, DEFAULT_BLADE_COLORS
+from app.db.mongo import DEFAULT_MOTOR_COLORS, DEFAULT_BLADE_COLORS
 
 router = APIRouter(prefix="/api/admin/products", tags=["Admin Products"])
 

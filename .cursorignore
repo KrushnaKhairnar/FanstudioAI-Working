@@ -1,5 +1,4 @@
-  uploads/
-
+.env
   public/assets/aistudio/
   .venv/
   node_modules/

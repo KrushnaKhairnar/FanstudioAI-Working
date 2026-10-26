@@ -8,34 +8,34 @@ import cv2
 import numpy as np
 from fastapi import HTTPException
 
-from backend.app.core.config import settings
-from backend.app.db.mongo import db_manager
-from backend.app.db.seed import seed_database
-from backend.app.repositories import (
+from app.core.config import settings
+from app.db.mongo import db_manager
+from app.db.seed import seed_database
+from app.repositories import (
     products_repo,
     finishes_repo,
     variants_repo,
     audit_repo,
 )
-from backend.app.models.specifications import FanSpecifications
-from backend.app.models.product import FanProductCreate
-from backend.app.models.variant import FanVariantCreate
-from backend.app.api.routes.admin.products import create_product, list_products
-from backend.app.api.routes.admin.variants import create_variant
-from backend.app.api.routes.users.catalog import (
+from app.models.specifications import FanSpecifications
+from app.models.product import FanProductCreate
+from app.models.variant import FanVariantCreate
+from app.api.routes.admin.products import create_product, list_products
+from app.api.routes.admin.variants import create_variant
+from app.api.routes.users.catalog import (
     get_user_products,
     get_user_finishes,
     get_user_product_variants,
     resolve_variant_combination,
     ResolveVariantRequest,
 )
-from backend.app.api.routes.users.visualize import (
+from app.api.routes.users.visualize import (
     create_visualization_job,
     VisualizationRequest,
     get_visualization_job,
     VISUALIZATIONS_DIR,
 )
-from backend.app.services.image_processing import (
+from app.services.image_processing import (
     validate_and_decode_image,
     analyze_room_geometry,
     ROOMS_DIR,

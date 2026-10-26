@@ -11,8 +11,8 @@ from typing import List, Optional, Dict, Any
 from fastapi import APIRouter, UploadFile, File, Form, HTTPException, status
 from pydantic import BaseModel, Field
 
-from backend.app.repositories import rooms_repo
-from backend.app.services.image_processing import (
+from app.repositories import rooms_repo
+from app.services.image_processing import (
     validate_and_decode_image,
     analyze_room_geometry,
     save_processed_room,

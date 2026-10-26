@@ -1,16 +1,16 @@
 """
 Entity repositories package.
 """
-from backend.app.repositories.base import BaseRepository, utc_now
-from backend.app.repositories.product import ProductsRepository, products_repo
-from backend.app.repositories.finish import FinishesRepository, finishes_repo
-from backend.app.repositories.variant import VariantsRepository, variants_repo
-from backend.app.repositories.media import MediaRepository, media_repo
-from backend.app.repositories.audit import AuditLogsRepository, audit_repo
-from backend.app.repositories.ai_job import AiJobsRepository, ai_jobs_repo
-from backend.app.repositories.ai_config import AiConfigRepository, ai_config_repo
-from backend.app.repositories.room import RoomsRepository, rooms_repo
-from backend.app.repositories.visualization_result import (
+from app.repositories.base import BaseRepository, utc_now
+from app.repositories.product import ProductsRepository, products_repo
+from app.repositories.finish import FinishesRepository, finishes_repo
+from app.repositories.variant import VariantsRepository, variants_repo
+from app.repositories.media import MediaRepository, media_repo
+from app.repositories.audit import AuditLogsRepository, audit_repo
+from app.repositories.ai_job import AiJobsRepository, ai_jobs_repo
+from app.repositories.ai_config import AiConfigRepository, ai_config_repo
+from app.repositories.room import RoomsRepository, rooms_repo
+from app.repositories.visualization_result import (
     VisualizationResultsRepository,
     vis_results_repo,
 )

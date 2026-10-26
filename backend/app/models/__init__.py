@@ -1,19 +1,19 @@
 """
 FanStudioAI Pydantic Domain Models Package.
 """
-from backend.app.models.specifications import FanSpecifications, FORBIDDEN_SPEC_FIELDS
-from backend.app.models.finish import Finish, FinishCreate, FinishUpdate
-from backend.app.models.variant import FanVariant, FanVariantCreate, FanVariantUpdate
-from backend.app.models.product import FanProduct, FanProductCreate, FanProductUpdate
-from backend.app.models.media import ProductMedia, ProductMediaCreate, ProductMediaUpdate
-from backend.app.models.ai import (
+from app.models.specifications import FanSpecifications, FORBIDDEN_SPEC_FIELDS
+from app.models.finish import Finish, FinishCreate, FinishUpdate
+from app.models.variant import FanVariant, FanVariantCreate, FanVariantUpdate
+from app.models.product import FanProduct, FanProductCreate, FanProductUpdate
+from app.models.media import ProductMedia, ProductMediaCreate, ProductMediaUpdate
+from app.models.ai import (
     AIProductConfiguration,
     AIJob,
     AIJobCreate,
     RoomAnalysis,
     GeneratedResult,
 )
-from backend.app.models.admin import (
+from app.models.admin import (
     AdminUser,
     AdminUserPublic,
     AdminLoginRequest,

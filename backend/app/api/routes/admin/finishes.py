@@ -8,11 +8,11 @@ from typing import List, Optional, Literal, Dict, Any
 from fastapi import APIRouter, HTTPException, Query, status
 from pydantic import BaseModel, Field
 
-from backend.app.repositories import (
+from app.repositories import (
     finishes_repo,
     audit_repo,
 )
-from backend.app.models.finish import (
+from app.models.finish import (
     Finish,
     FinishCreate,
     FinishUpdate,

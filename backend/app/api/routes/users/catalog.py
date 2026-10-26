@@ -11,22 +11,22 @@ from fastapi import APIRouter, HTTPException, Query, Response, status
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
-from backend.app.repositories import (
+from app.repositories import (
     products_repo,
     finishes_repo,
     variants_repo,
     media_repo,
 )
-from backend.app.models.product import FanProduct
-from backend.app.models.finish import Finish
-from backend.app.models.variant import FanVariant
-from backend.app.models.media import ProductMedia
+from app.models.product import FanProduct
+from app.models.finish import Finish
+from app.models.variant import FanVariant
+from app.models.media import ProductMedia
+from app.core.config import settings
 
 router = APIRouter(prefix="/api/users", tags=["User Catalog"])
 
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
-UPLOADS_DIR = ROOT_DIR / "uploads"
-DATA_DIR = ROOT_DIR / "data"
+UPLOADS_DIR = Path(settings.UPLOAD_DIR)
+DATA_DIR = Path(settings.DATA_DIR)
 
 
 class PublicProductSummary(BaseModel):
@@ -407,7 +407,7 @@ def get_combination_image(
 def get_fan_cutout(url: str):
     """On-demand transparent cutout endpoint."""
     clean = url.lstrip("/")
-    abs_src = ROOT_DIR / clean
+    abs_src = Path(settings.DATA_DIR).parent / str(clean).lstrip("/")
     data_src = DATA_DIR / clean
 
     actual_src = abs_src if abs_src.exists() else (data_src if data_src.exists() else None)

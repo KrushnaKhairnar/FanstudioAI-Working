@@ -2,7 +2,7 @@
 Finish repository for managing reusable motor and blade finishes.
 """
 from typing import Any, Dict, List, Optional
-from backend.app.repositories.base import BaseRepository, utc_now
+from app.repositories.base import BaseRepository, utc_now
 
 
 class FinishesRepository(BaseRepository):

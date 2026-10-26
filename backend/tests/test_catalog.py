@@ -3,17 +3,17 @@ Verification Test Suite: User Catalog API.
 """
 from fastapi import HTTPException
 
-from backend.app.db.mongo import db_manager
-from backend.app.db.seed import seed_database
-from backend.app.repositories import (
+from app.db.mongo import db_manager
+from app.db.seed import seed_database
+from app.repositories import (
     products_repo,
     finishes_repo,
     variants_repo,
 )
-from backend.app.models.product import FanProductCreate
-from backend.app.models.specifications import FanSpecifications
-from backend.app.api.routes.admin.products import create_product
-from backend.app.api.routes.users.catalog import (
+from app.models.product import FanProductCreate
+from app.models.specifications import FanSpecifications
+from app.api.routes.admin.products import create_product
+from app.api.routes.users.catalog import (
     get_products,
     get_product_details,
     get_active_finishes,

@@ -2,7 +2,7 @@
 Product repository for managing fan catalog records.
 """
 from typing import Any, Dict, List, Optional
-from backend.app.repositories.base import BaseRepository, utc_now
+from app.repositories.base import BaseRepository, utc_now
 
 
 class ProductsRepository(BaseRepository):

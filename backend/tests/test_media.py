@@ -3,18 +3,18 @@ Verification Test Suite: Media & AI Asset Management.
 """
 from fastapi import HTTPException
 
-from backend.app.db.mongo import db_manager
-from backend.app.db.seed import seed_database
-from backend.app.repositories import (
+from app.db.mongo import db_manager
+from app.db.seed import seed_database
+from app.repositories import (
     products_repo,
     variants_repo,
     media_repo,
     ai_config_repo,
     audit_repo,
 )
-from backend.app.models.media import ProductMediaCreate, ProductMediaUpdate
-from backend.app.models.ai import AIProductConfiguration
-from backend.app.api.routes.admin.media import (
+from app.models.media import ProductMediaCreate, ProductMediaUpdate
+from app.models.ai import AIProductConfiguration
+from app.api.routes.admin.media import (
     create_media,
     list_product_media,
     update_media,

@@ -5,7 +5,7 @@ Includes specifications, motor housing colors, blade colors, default finishes, a
 import uuid
 from typing import List, Optional, Literal, Dict, Any
 from pydantic import BaseModel, Field
-from backend.app.models.specifications import FanSpecifications
+from app.models.specifications import FanSpecifications
 
 
 class ColorCombinationItem(BaseModel):

@@ -3,7 +3,7 @@ Base repository providing common data access primitives.
 """
 from datetime import datetime, timezone
 from typing import Any, Dict, Optional
-from backend.app.db.mongo import db_manager
+from app.db.mongo import db_manager
 
 
 def utc_now() -> str:

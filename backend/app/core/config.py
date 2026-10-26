@@ -1,7 +1,8 @@
 """
-Application configuration using Pydantic Settings (with fallback for standalone environments).
+Application configuration using Pydantic Settings.
 """
 import os
+from pathlib import Path
 from typing import Optional, List
 
 try:
@@ -16,49 +17,47 @@ except ImportError:
                     setattr(self, k, v)
 
 
-# Load .env if present
-env_path = os.path.join(os.getcwd(), ".env")
-if os.path.exists(env_path):
-    try:
-        with open(env_path, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith("#") and "=" in line:
-                    k, v = line.split("=", 1)
-                    k = k.strip()
-                    v = v.strip().strip("'\"")
-                    if k and k not in os.environ:
-                        os.environ[k] = v
-    except Exception:
-        pass
+BACKEND_ROOT = Path(__file__).resolve().parent.parent.parent
+
+
+def _parse_cors(value: Optional[str]) -> List[str]:
+    defaults = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ]
+    if not value:
+        return defaults
+    parts = [p.strip() for p in value.split(",") if p.strip()]
+    return parts or defaults
 
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "FanStudioAI"
     VERSION: str = "1.0.0"
     API_V1_STR: str = "/api"
-    
-    # Server ports
+
     HOST: str = "127.0.0.1"
     PORT: int = 8000
-    
-    # MongoDB Configuration
-    MONGODB_URI: Optional[str] = os.getenv("MONGODB_URI", "mongodb://localhost:27017/fanstudioai")
-    MONGODB_DB_NAME: Optional[str] = os.getenv("MONGODB_DB_NAME", "fanstudio")
-    DB_NAME: str = os.getenv("MONGODB_DB_NAME", "fanstudio")
-    
-    # CORS Configuration
+
+    MONGODB_URI: str = "mongodb://localhost:27017"
+    MONGODB_DB_NAME: str = "fanstudio"
+    DB_NAME: str = "fanstudio"
+
     CORS_ORIGINS: List[str] = [
         "http://localhost:3000",
         "http://127.0.0.1:3000",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
     ]
-    
-    # Gemini AI
-    GEMINI_API_KEY: Optional[str] = os.getenv("GEMINI_API_KEY")
-    APP_URL: Optional[str] = os.getenv("APP_URL")
-    
+
+    UPLOAD_DIR: str = str(BACKEND_ROOT / "uploads")
+    DATA_DIR: str = str(BACKEND_ROOT / "data")
+
+    GEMINI_API_KEY: Optional[str] = None
+    APP_URL: Optional[str] = None
+
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
@@ -66,7 +65,14 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-if settings.MONGODB_DB_NAME:
-    settings.DB_NAME = settings.MONGODB_DB_NAME
+settings.DB_NAME = settings.MONGODB_DB_NAME
+if not settings.UPLOAD_DIR:
+    settings.UPLOAD_DIR = str(BACKEND_ROOT / "uploads")
+if not settings.DATA_DIR:
+    settings.DATA_DIR = str(BACKEND_ROOT / "data")
+# Allow CORS_ORIGINS from env as comma-separated string via os.environ override
+_cors_env = os.getenv("CORS_ORIGINS")
+if _cors_env:
+    settings.CORS_ORIGINS = _parse_cors(_cors_env)
 if settings.APP_URL and settings.APP_URL not in settings.CORS_ORIGINS:
     settings.CORS_ORIGINS.append(settings.APP_URL)

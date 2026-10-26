@@ -1,7 +1,7 @@
 """
 Core dependencies for FastAPI routes.
 """
-from backend.app.db.mongo import db_manager, MongoDBManager
+from app.db.mongo import db_manager, MongoDBManager
 
 
 def get_db() -> MongoDBManager:

@@ -2,7 +2,7 @@
 Room repository for preprocessed room photos and ceiling analyses.
 """
 from typing import Any, Dict, Optional
-from backend.app.repositories.base import BaseRepository, utc_now
+from app.repositories.base import BaseRepository, utc_now
 
 
 class RoomsRepository(BaseRepository):

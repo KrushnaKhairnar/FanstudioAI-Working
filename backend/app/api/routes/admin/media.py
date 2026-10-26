@@ -11,26 +11,26 @@ from typing import List, Optional, Dict, Any
 from fastapi import APIRouter, HTTPException, Query, status
 from pydantic import BaseModel
 
-from backend.app.repositories import (
+from app.repositories import (
     products_repo,
     variants_repo,
     media_repo,
     ai_config_repo,
     audit_repo,
 )
-from backend.app.models.media import (
+from app.models.media import (
     ProductMedia,
     ProductMediaCreate,
     ProductMediaUpdate,
 )
-from backend.app.models.ai import (
+from app.models.ai import (
     AIProductConfiguration,
 )
+from app.core.config import settings
 
 router = APIRouter(prefix="/api/admin", tags=["Admin Media & AI Assets"])
 
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
-UPLOADS_DIR = ROOT_DIR / "uploads"
+UPLOADS_DIR = Path(settings.UPLOAD_DIR)
 
 
 @router.get("/products/{product_id}/media", response_model=List[ProductMedia])

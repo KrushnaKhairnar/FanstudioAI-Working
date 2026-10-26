@@ -13,7 +13,7 @@ import cv2
 from fastapi import APIRouter, HTTPException, status
 from pydantic import BaseModel, Field
 
-from backend.app.repositories import (
+from app.repositories import (
     products_repo,
     variants_repo,
     finishes_repo,
@@ -23,17 +23,18 @@ from backend.app.repositories import (
     rooms_repo,
     vis_results_repo,
 )
-from backend.app.services.image_processing import (
+from app.services.image_processing import (
     ROOMS_DIR,
     analyze_room_geometry,
 )
-from backend.app.services.perspective_lighting import (
+from app.services.perspective_lighting import (
     transform_and_composite_fan,
 )
+from app.core.config import settings
 
 router = APIRouter(prefix="/api/users/visualize", tags=["User AI Visualization"])
 
-VISUALIZATIONS_DIR = os.path.join(os.getcwd(), "data", "visualizations")
+VISUALIZATIONS_DIR = os.path.join(settings.DATA_DIR, "visualizations")
 os.makedirs(VISUALIZATIONS_DIR, exist_ok=True)
 
 

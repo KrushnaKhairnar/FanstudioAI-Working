@@ -3,12 +3,12 @@ Verification Test Suite: Finish Management.
 """
 from fastapi import HTTPException
 
-from backend.app.db.mongo import db_manager
-from backend.app.db.seed import seed_database
-from backend.app.repositories import finishes_repo, audit_repo
-from backend.app.models.finish import FinishCreate, FinishUpdate
-from backend.app.models.variant import FanVariant
-from backend.app.api.routes.admin.finishes import (
+from app.db.mongo import db_manager
+from app.db.seed import seed_database
+from app.repositories import finishes_repo, audit_repo
+from app.models.finish import FinishCreate, FinishUpdate
+from app.models.variant import FanVariant
+from app.api.routes.admin.finishes import (
     create_finish,
     list_finishes,
     get_finish,

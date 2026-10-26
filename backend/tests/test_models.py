@@ -4,7 +4,7 @@ Verification Test Suite: Domain Models Validation.
 import uuid
 from pydantic import ValidationError
 
-from backend.app.models import (
+from app.models import (
     FanSpecifications,
     Finish,
     FinishCreate,

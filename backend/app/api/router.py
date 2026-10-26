@@ -4,15 +4,15 @@ The ONLY place routers are registered in the application.
 """
 from fastapi import APIRouter
 
-from backend.app.api.routes.admin.products import router as admin_products_router
-from backend.app.api.routes.admin.finishes import router as admin_finishes_router
-from backend.app.api.routes.admin.variants import router as admin_variants_router
-from backend.app.api.routes.admin.media import router as admin_media_router
-from backend.app.api.routes.admin.system import router as admin_system_router
+from app.api.routes.admin.products import router as admin_products_router
+from app.api.routes.admin.finishes import router as admin_finishes_router
+from app.api.routes.admin.variants import router as admin_variants_router
+from app.api.routes.admin.media import router as admin_media_router
+from app.api.routes.admin.system import router as admin_system_router
 
-from backend.app.api.routes.users.catalog import router as user_catalog_router
-from backend.app.api.routes.users.rooms import router as user_rooms_router, upload_room_file
-from backend.app.api.routes.users.visualize import router as user_visualize_router
+from app.api.routes.users.catalog import router as user_catalog_router
+from app.api.routes.users.rooms import router as user_rooms_router, upload_room_file
+from app.api.routes.users.visualize import router as user_visualize_router
 
 api_router = APIRouter()
 

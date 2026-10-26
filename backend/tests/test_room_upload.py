@@ -8,14 +8,14 @@ import numpy as np
 from PIL import Image
 from fastapi import HTTPException
 
-from backend.app.db.mongo import db_manager
-from backend.app.services.image_processing import (
+from app.db.mongo import db_manager
+from app.services.image_processing import (
     validate_and_decode_image,
     analyze_room_geometry,
     save_processed_room,
     ROOMS_DIR,
 )
-from backend.app.api.routes.users.rooms import (
+from app.api.routes.users.rooms import (
     upload_room_base64,
     get_room,
     Base64UploadRequest,

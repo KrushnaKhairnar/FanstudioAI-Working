@@ -2,7 +2,7 @@
 AI Job repository for managing room visualization jobs.
 """
 from typing import Any, Dict, Optional
-from backend.app.repositories.base import BaseRepository, utc_now
+from app.repositories.base import BaseRepository, utc_now
 
 
 class AiJobsRepository(BaseRepository):

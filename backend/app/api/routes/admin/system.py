@@ -5,8 +5,8 @@ Provides database status inspection, catalog reload from disk, and audit logs.
 from typing import Dict, Any, List
 from fastapi import APIRouter
 
-from backend.app.db.mongo import db_manager
-from backend.app.repositories import products_repo, audit_repo
+from app.db.mongo import db_manager
+from app.repositories import products_repo, audit_repo
 
 router = APIRouter(prefix="/api/admin", tags=["Admin System"])
 

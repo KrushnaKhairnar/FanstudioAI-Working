@@ -10,10 +10,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 
-from backend.app.core.config import settings
-from backend.app.db.mongo import db_manager
-from backend.app.db.seed import seed_database
-from backend.app.api.router import api_router
+from app.core.config import settings
+from app.db.mongo import db_manager
+from app.db.seed import seed_database
+from app.api.router import api_router
 
 START_TIME = time.time()
 
@@ -48,11 +48,11 @@ app.add_middleware(
 )
 
 # Static Asset Mounts
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent
-rooms_dir = ROOT_DIR / "data" / "rooms"
-vis_dir = ROOT_DIR / "data" / "visualizations"
-products_dir = ROOT_DIR / "data" / "products"
-uploads_dir = ROOT_DIR / "uploads"
+data_root = Path(settings.DATA_DIR)
+uploads_dir = Path(settings.UPLOAD_DIR)
+rooms_dir = data_root / "rooms"
+vis_dir = data_root / "visualizations"
+products_dir = data_root / "products"
 
 rooms_dir.mkdir(parents=True, exist_ok=True)
 vis_dir.mkdir(parents=True, exist_ok=True)

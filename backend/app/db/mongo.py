@@ -20,13 +20,12 @@ except ImportError:
     ASCENDING = 1
     DESCENDING = -1
 
-from backend.app.core.config import settings
+from app.core.config import settings
 
 logger = logging.getLogger("fanstudioai.mongo")
 
 # Project directories
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent.parent
-DATA_DIR = ROOT_DIR / "data"
+DATA_DIR = Path(settings.DATA_DIR)
 CATALOG_PATH = DATA_DIR / "catalog.json"
 PRODUCT_SAMPLE_PATH = DATA_DIR / "seed" / "products_sample.json"
 DATA_MONGODB_DIR = DATA_DIR / "mongodb"

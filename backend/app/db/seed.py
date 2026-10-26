@@ -4,8 +4,8 @@ Seeds reusable finishes and baseline catalog data conforming to the platform req
 """
 import uuid
 import logging
-from backend.app.db.mongo import db_manager
-from backend.app.repositories import (
+from app.db.mongo import db_manager
+from app.repositories import (
     products_repo,
     finishes_repo,
 )
