@@ -2,45 +2,52 @@
 Variant repository for managing fan motor + blade combinations.
 """
 from typing import Any, Dict, List, Optional
+
+from motor.motor_asyncio import AsyncIOMotorDatabase
+
 from app.repositories.base import BaseRepository, utc_now
 
 
 class VariantsRepository(BaseRepository):
-    def __init__(self):
-        super().__init__("product_variants")
+    collection_name = "product_variants"
+    id_field = "variant_id"
 
-    def find_by_product(self, product_id: str, only_active: bool = False) -> List[Dict[str, Any]]:
+    def __init__(self, db: AsyncIOMotorDatabase):
+        super().__init__(db)
+
+    async def find_by_product(self, product_id: str, only_active: bool = False) -> List[Dict[str, Any]]:
         query: Dict[str, Any] = {"product_id": product_id}
         if only_active:
             query["is_active"] = True
-        return list(self.collection.find(query))
+        return await self.collection.find(query).to_list(length=1000)
 
-    def find_by_id(self, variant_id: str) -> Optional[Dict[str, Any]]:
-        return self.collection.find_one({"variant_id": variant_id})
+    async def find_by_id(self, variant_id: str) -> Optional[Dict[str, Any]]:
+        return await self.collection.find_one({"_id": variant_id})
 
-    def find_exact(self, product_id: str, motor_finish_id: str, blade_finish_id: str) -> Optional[Dict[str, Any]]:
-        """Validate if exact combination is an approved variant."""
-        return self.collection.find_one({
+    async def find_exact(
+        self, product_id: str, motor_finish_id: str, blade_finish_id: str
+    ) -> Optional[Dict[str, Any]]:
+        return await self.collection.find_one({
             "product_id": product_id,
             "motor_finish_id": motor_finish_id,
             "blade_finish_id": blade_finish_id,
         })
 
-    def find_by_sku(self, sku: str) -> Optional[Dict[str, Any]]:
-        return self.collection.find_one({"sku": sku.strip()})
+    async def find_by_sku(self, sku: str) -> Optional[Dict[str, Any]]:
+        return await self.collection.find_one({"sku": sku.strip()})
 
-    def insert(self, data: Dict[str, Any]) -> Dict[str, Any]:
+    async def insert(self, data: Dict[str, Any]) -> Dict[str, Any]:
         data.setdefault("created_at", utc_now())
-        self.collection.insert_one(data)
+        eid = data.get("variant_id")
+        if eid:
+            data["_id"] = eid
+        await self.collection.insert_one(data)
         return data
 
-    def update(self, variant_id: str, updates: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    async def update(self, variant_id: str, updates: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         updates["updated_at"] = utc_now()
-        self.collection.update_one({"variant_id": variant_id}, {"$set": updates})
-        return self.find_by_id(variant_id)
+        await self.collection.update_one({"_id": variant_id}, {"$set": updates})
+        return await self.find_by_id(variant_id)
 
-    def set_active(self, variant_id: str, is_active: bool) -> Optional[Dict[str, Any]]:
-        return self.update(variant_id, {"is_active": is_active})
-
-
-variants_repo = VariantsRepository()
+    async def set_active(self, variant_id: str, is_active: bool) -> Optional[Dict[str, Any]]:
+        return await self.update(variant_id, {"is_active": is_active})

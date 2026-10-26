@@ -2,21 +2,23 @@
 Admin Media and AI Asset Management Router.
 Manages hero images, variant transparent cutouts, alpha masks, and AI placement configurations.
 """
-import os
+import asyncio
 import uuid
 import base64
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import List, Optional, Dict, Any
-from fastapi import APIRouter, HTTPException, Query, status
+from fastapi import APIRouter, HTTPException, Query, status, Depends
+from motor.motor_asyncio import AsyncIOMotorDatabase
 from pydantic import BaseModel
 
+from app.core.deps import get_db
 from app.repositories import (
-    products_repo,
-    variants_repo,
-    media_repo,
-    ai_config_repo,
-    audit_repo,
+    ProductsRepository,
+    VariantsRepository,
+    MediaRepository,
+    AiConfigRepository,
+    AuditLogsRepository,
 )
 from app.models.media import (
     ProductMedia,
@@ -34,12 +36,16 @@ UPLOADS_DIR = Path(settings.UPLOAD_DIR)
 
 
 @router.get("/products/{product_id}/media", response_model=List[ProductMedia])
-def list_product_media(
+async def list_product_media(
     product_id: str,
     variant_id: Optional[str] = Query(None),
+    db: AsyncIOMotorDatabase = Depends(get_db),
 ):
     """List all media assets associated with a fan product or specific variant."""
-    product = products_repo.find_by_id(product_id)
+    products_repo = ProductsRepository(db)
+    media_repo = MediaRepository(db)
+
+    product = await products_repo.find_by_id(product_id)
     if not product:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -47,17 +53,23 @@ def list_product_media(
         )
 
     vid = variant_id if isinstance(variant_id, str) and variant_id else None
-    media_items = media_repo.find_by_product(product_id, variant_id=vid)
+    media_items = await media_repo.find_by_product(product_id, variant_id=vid)
     return [ProductMedia(**m) for m in media_items]
 
 
 @router.post("/products/{product_id}/media", response_model=ProductMedia, status_code=status.HTTP_201_CREATED)
-def create_media(
+async def create_media(
     product_id: str,
     payload: ProductMediaCreate,
+    db: AsyncIOMotorDatabase = Depends(get_db),
 ):
     """Register a new media file."""
-    product = products_repo.find_by_id(product_id)
+    products_repo = ProductsRepository(db)
+    variants_repo = VariantsRepository(db)
+    media_repo = MediaRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    product = await products_repo.find_by_id(product_id)
     if not product:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -65,7 +77,7 @@ def create_media(
         )
 
     if payload.variant_id:
-        variant = variants_repo.find_by_id(payload.variant_id)
+        variant = await variants_repo.find_by_id(payload.variant_id)
         if not variant or variant.get("product_id") != product_id:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
@@ -81,21 +93,21 @@ def create_media(
     doc["updated_at"] = now_iso
 
     if payload.is_primary:
-        existing_media = media_repo.find_by_product(product_id, variant_id=payload.variant_id)
+        existing_media = await media_repo.find_by_product(product_id, variant_id=payload.variant_id)
         for m in existing_media:
             if m.get("is_primary"):
-                media_repo.update(m["media_id"], {"is_primary": False})
+                await media_repo.update(m["media_id"], {"is_primary": False})
 
-    created = media_repo.insert(doc)
+    created = await media_repo.insert(doc)
 
     media_url = payload.file_url or payload.url
     if payload.variant_id:
         if payload.media_type == "transparent_cutout":
-            variants_repo.update(payload.variant_id, {"transparent_image_url": media_url})
+            await variants_repo.update(payload.variant_id, {"transparent_image_url": media_url})
         elif payload.media_type == "variant_render":
-            variants_repo.update(payload.variant_id, {"product_image_url": media_url})
+            await variants_repo.update(payload.variant_id, {"product_image_url": media_url})
 
-    audit_repo.log(
+    await audit_repo.log(
         action="CREATE_MEDIA",
         target_entity="product_media",
         target_id=new_id,
@@ -111,12 +123,16 @@ def create_media(
 
 
 @router.put("/media/{media_id}", response_model=ProductMedia)
-def update_media(
+async def update_media(
     media_id: str,
     payload: ProductMediaUpdate,
+    db: AsyncIOMotorDatabase = Depends(get_db),
 ):
     """Update media metadata, sort ordering, primary flag, or active status."""
-    existing = media_repo.find_by_id(media_id)
+    media_repo = MediaRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    existing = await media_repo.find_by_id(media_id)
     if not existing:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -126,11 +142,11 @@ def update_media(
     update_data = payload.model_dump(exclude_unset=True)
     update_data["updated_at"] = datetime.now(timezone.utc).isoformat()
 
-    updated = media_repo.update(media_id, update_data)
+    updated = await media_repo.update(media_id, update_data)
     if not updated:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to update media.")
 
-    audit_repo.log(
+    await audit_repo.log(
         action="UPDATE_MEDIA",
         target_entity="product_media",
         target_id=media_id,
@@ -141,18 +157,21 @@ def update_media(
 
 
 @router.delete("/media/{media_id}")
-def delete_media(media_id: str):
+async def delete_media(media_id: str, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Delete/deactivate a media asset."""
-    existing = media_repo.find_by_id(media_id)
+    media_repo = MediaRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    existing = await media_repo.find_by_id(media_id)
     if not existing:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Media with ID '{media_id}' not found.",
         )
 
-    media_repo.delete(media_id)
+    await media_repo.delete(media_id)
 
-    audit_repo.log(
+    await audit_repo.log(
         action="DELETE_MEDIA",
         target_entity="product_media",
         target_id=media_id,
@@ -166,16 +185,19 @@ def delete_media(media_id: str):
 
 
 @router.get("/products/{product_id}/ai-config", response_model=AIProductConfiguration)
-def get_product_ai_config(product_id: str):
+async def get_product_ai_config(product_id: str, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Get the AI placement and compositing configuration for a product."""
-    product = products_repo.find_by_id(product_id)
+    products_repo = ProductsRepository(db)
+    ai_config_repo = AiConfigRepository(db)
+
+    product = await products_repo.find_by_id(product_id)
     if not product:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Product with ID '{product_id}' not found.",
         )
 
-    config = ai_config_repo.find_by_target("product", product_id)
+    config = await ai_config_repo.find_by_target("product", product_id)
     if not config:
         return AIProductConfiguration(
             product_id=product_id,
@@ -189,12 +211,17 @@ def get_product_ai_config(product_id: str):
 
 
 @router.put("/products/{product_id}/ai-config", response_model=AIProductConfiguration)
-def update_product_ai_config(
+async def update_product_ai_config(
     product_id: str,
     payload: AIProductConfiguration,
+    db: AsyncIOMotorDatabase = Depends(get_db),
 ):
     """Update or save the AI placement configuration for a product."""
-    product = products_repo.find_by_id(product_id)
+    products_repo = ProductsRepository(db)
+    ai_config_repo = AiConfigRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    product = await products_repo.find_by_id(product_id)
     if not product:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -203,9 +230,9 @@ def update_product_ai_config(
 
     config_data = payload.model_dump()
     config_data["product_id"] = product_id
-    saved = ai_config_repo.upsert_config("product", product_id, config_data)
+    saved = await ai_config_repo.upsert_config("product", product_id, config_data)
 
-    audit_repo.log(
+    await audit_repo.log(
         action="UPDATE_AI_CONFIG",
         target_entity="product",
         target_id=product_id,
@@ -216,18 +243,21 @@ def update_product_ai_config(
 
 
 @router.get("/variants/{variant_id}/ai-config", response_model=AIProductConfiguration)
-def get_variant_ai_config(variant_id: str):
+async def get_variant_ai_config(variant_id: str, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Get AI placement configuration specific to a variant."""
-    variant = variants_repo.find_by_id(variant_id)
+    variants_repo = VariantsRepository(db)
+    ai_config_repo = AiConfigRepository(db)
+
+    variant = await variants_repo.find_by_id(variant_id)
     if not variant:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Variant with ID '{variant_id}' not found.",
         )
 
-    config = ai_config_repo.find_by_target("variant", variant_id)
+    config = await ai_config_repo.find_by_target("variant", variant_id)
     if not config:
-        parent_config = ai_config_repo.find_by_target("product", variant["product_id"])
+        parent_config = await ai_config_repo.find_by_target("product", variant["product_id"])
         if parent_config:
             parent_config["variant_id"] = variant_id
             return AIProductConfiguration(**parent_config)
@@ -246,12 +276,17 @@ def get_variant_ai_config(variant_id: str):
 
 
 @router.put("/variants/{variant_id}/ai-config", response_model=AIProductConfiguration)
-def update_variant_ai_config(
+async def update_variant_ai_config(
     variant_id: str,
     payload: AIProductConfiguration,
+    db: AsyncIOMotorDatabase = Depends(get_db),
 ):
     """Update or save the AI placement configuration for a variant."""
-    variant = variants_repo.find_by_id(variant_id)
+    variants_repo = VariantsRepository(db)
+    ai_config_repo = AiConfigRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    variant = await variants_repo.find_by_id(variant_id)
     if not variant:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -261,9 +296,9 @@ def update_variant_ai_config(
     config_data = payload.model_dump()
     config_data["product_id"] = variant["product_id"]
     config_data["variant_id"] = variant_id
-    saved = ai_config_repo.upsert_config("variant", variant_id, config_data)
+    saved = await ai_config_repo.upsert_config("variant", variant_id, config_data)
 
-    audit_repo.log(
+    await audit_repo.log(
         action="UPDATE_AI_CONFIG",
         target_entity="variant",
         target_id=variant_id,
@@ -282,20 +317,30 @@ class MediaUploadDirectPayload(BaseModel):
     is_primary: Optional[bool] = True
 
 
+def _write_upload_file(dest_path: Path, file_bytes: bytes) -> None:
+    with open(dest_path, "wb") as f:
+        f.write(file_bytes)
+
+
 @router.post("/media/upload")
-def upload_product_media(payload: MediaUploadDirectPayload):
+async def upload_product_media(
+    payload: MediaUploadDirectPayload,
+    db: AsyncIOMotorDatabase = Depends(get_db),
+):
     """Directly upload a fan image either via base64 data-URL or remote URL."""
-    UPLOADS_DIR.mkdir(parents=True, exist_ok=True)
+    products_repo = ProductsRepository(db)
+
+    await asyncio.to_thread(UPLOADS_DIR.mkdir, parents=True, exist_ok=True)
 
     product = None
     product_code = "misc"
     if payload.product_id:
-        product = products_repo.find_by_id(payload.product_id) or products_repo.find_by_code(payload.product_id)
+        product = await products_repo.find_by_id(payload.product_id) or await products_repo.find_by_code(payload.product_id)
         if product:
             product_code = product.get("product_code") or product.get("fanCode") or payload.product_id
 
     target_dir = UPLOADS_DIR / "fans" / product_code
-    target_dir.mkdir(parents=True, exist_ok=True)
+    await asyncio.to_thread(target_dir.mkdir, parents=True, exist_ok=True)
 
     saved_rel_path = None
     fname = payload.filename or f"{product_code}_upload.jpg"
@@ -308,8 +353,7 @@ def upload_product_media(payload: MediaUploadDirectPayload):
             b64_data = b64_data.split(",", 1)[1]
         try:
             file_bytes = base64.b64decode(b64_data)
-            with open(dest_path, "wb") as f:
-                f.write(file_bytes)
+            await asyncio.to_thread(_write_upload_file, dest_path, file_bytes)
             saved_rel_path = f"/uploads/fans/{product_code}/{safe_fname}"
         except Exception as e:
             raise HTTPException(status_code=400, detail=f"Failed to decode base64 image: {str(e)}")
@@ -326,7 +370,7 @@ def upload_product_media(payload: MediaUploadDirectPayload):
         existing_images = product.get("images") or []
         if saved_rel_path not in existing_images:
             update_doc["images"] = [saved_rel_path] + [img for img in existing_images if img != saved_rel_path]
-        products_repo.update(product["product_id"], update_doc)
+        await products_repo.update(product["product_id"], update_doc)
 
     return {
         "success": True,

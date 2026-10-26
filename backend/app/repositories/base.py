@@ -3,7 +3,8 @@ Base repository providing common data access primitives.
 """
 from datetime import datetime, timezone
 from typing import Any, Dict, Optional
-from app.db.mongo import db_manager
+
+from motor.motor_asyncio import AsyncIOMotorDatabase, AsyncIOMotorCollection
 
 
 def utc_now() -> str:
@@ -12,12 +13,15 @@ def utc_now() -> str:
 
 
 class BaseRepository:
-    def __init__(self, collection_name: str):
-        self.collection_name = collection_name
+    collection_name: str = ""
+    id_field: str = "_id"
+
+    def __init__(self, db: AsyncIOMotorDatabase):
+        self.db = db
 
     @property
-    def collection(self):
-        return getattr(db_manager, self.collection_name)
+    def collection(self) -> AsyncIOMotorCollection:
+        return self.db[self.collection_name]
 
-    def count(self, query: Optional[Dict[str, Any]] = None) -> int:
-        return self.collection.count_documents(query or {}) if hasattr(self.collection, "count_documents") else len(list(self.collection.find(query or {})))
+    async def count(self, query: Optional[Dict[str, Any]] = None) -> int:
+        return await self.collection.count_documents(query or {})

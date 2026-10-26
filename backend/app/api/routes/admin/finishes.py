@@ -5,12 +5,14 @@ Full CRUD, color styling, sort ordering, and soft-deactivation.
 import uuid
 from datetime import datetime, timezone
 from typing import List, Optional, Literal, Dict, Any
-from fastapi import APIRouter, HTTPException, Query, status
+from fastapi import APIRouter, HTTPException, Query, status, Depends
+from motor.motor_asyncio import AsyncIOMotorDatabase
 from pydantic import BaseModel, Field
 
+from app.core.deps import get_db
 from app.repositories import (
-    finishes_repo,
-    audit_repo,
+    FinishesRepository,
+    AuditLogsRepository,
 )
 from app.models.finish import (
     Finish,
@@ -26,19 +28,22 @@ class FinishStatusUpdate(BaseModel):
 
 
 @router.get("", response_model=List[Finish])
-def list_finishes(
+async def list_finishes(
     finish_type: Optional[Literal["motor", "blade"]] = Query(None, alias="type"),
     is_active: Optional[bool] = Query(None),
+    db: AsyncIOMotorDatabase = Depends(get_db),
 ):
     """List all finishes with optional type (motor/blade) and status filtering."""
-    finishes = finishes_repo.find_all(finish_type=finish_type, is_active=is_active)
+    finishes_repo = FinishesRepository(db)
+    finishes = await finishes_repo.find_all(finish_type=finish_type, is_active=is_active)
     return [Finish(**f) for f in finishes]
 
 
 @router.get("/{finish_id}", response_model=Finish)
-def get_finish(finish_id: str):
+async def get_finish(finish_id: str, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Retrieve single finish by UUID."""
-    finish = finishes_repo.find_by_id(finish_id)
+    finishes_repo = FinishesRepository(db)
+    finish = await finishes_repo.find_by_id(finish_id)
     if not finish:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -48,9 +53,12 @@ def get_finish(finish_id: str):
 
 
 @router.post("", response_model=Finish, status_code=status.HTTP_201_CREATED)
-def create_finish(payload: FinishCreate):
+async def create_finish(payload: FinishCreate, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Create a new reusable motor or blade finish."""
-    existing = finishes_repo.find_by_name_and_type(payload.name, payload.type)
+    finishes_repo = FinishesRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    existing = await finishes_repo.find_by_name_and_type(payload.name, payload.type)
     if existing:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -64,9 +72,9 @@ def create_finish(payload: FinishCreate):
     doc["created_at"] = now_iso
     doc["updated_at"] = now_iso
 
-    created = finishes_repo.insert(doc)
+    created = await finishes_repo.insert(doc)
 
-    audit_repo.log(
+    await audit_repo.log(
         action="CREATE_FINISH",
         target_entity="finish",
         target_id=new_id,
@@ -77,9 +85,16 @@ def create_finish(payload: FinishCreate):
 
 
 @router.put("/{finish_id}", response_model=Finish)
-def update_finish(finish_id: str, payload: FinishUpdate):
+async def update_finish(
+    finish_id: str,
+    payload: FinishUpdate,
+    db: AsyncIOMotorDatabase = Depends(get_db),
+):
     """Update finish details, swatch image, color code, or sort order."""
-    existing = finishes_repo.find_by_id(finish_id)
+    finishes_repo = FinishesRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    existing = await finishes_repo.find_by_id(finish_id)
     if not existing:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -89,7 +104,7 @@ def update_finish(finish_id: str, payload: FinishUpdate):
     target_name = payload.name or existing.get("name")
     target_type = payload.type or existing.get("type")
     if (payload.name and payload.name != existing.get("name")) or (payload.type and payload.type != existing.get("type")):
-        duplicate = finishes_repo.find_by_name_and_type(target_name, target_type)
+        duplicate = await finishes_repo.find_by_name_and_type(target_name, target_type)
         if duplicate and duplicate.get("finish_id") != finish_id:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
@@ -99,11 +114,11 @@ def update_finish(finish_id: str, payload: FinishUpdate):
     update_data = payload.model_dump(exclude_unset=True)
     update_data["updated_at"] = datetime.now(timezone.utc).isoformat()
 
-    updated = finishes_repo.update(finish_id, update_data)
+    updated = await finishes_repo.update(finish_id, update_data)
     if not updated:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to update finish.")
 
-    audit_repo.log(
+    await audit_repo.log(
         action="UPDATE_FINISH",
         target_entity="finish",
         target_id=finish_id,
@@ -114,21 +129,28 @@ def update_finish(finish_id: str, payload: FinishUpdate):
 
 
 @router.patch("/{finish_id}/status", response_model=Finish)
-def update_finish_status(finish_id: str, payload: FinishStatusUpdate):
+async def update_finish_status(
+    finish_id: str,
+    payload: FinishStatusUpdate,
+    db: AsyncIOMotorDatabase = Depends(get_db),
+):
     """Activate or deactivate a finish."""
-    existing = finishes_repo.find_by_id(finish_id)
+    finishes_repo = FinishesRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    existing = await finishes_repo.find_by_id(finish_id)
     if not existing:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Finish with ID '{finish_id}' not found.",
         )
 
-    updated = finishes_repo.update(finish_id, {
+    updated = await finishes_repo.update(finish_id, {
         "is_active": payload.is_active,
         "updated_at": datetime.now(timezone.utc).isoformat(),
     })
 
-    audit_repo.log(
+    await audit_repo.log(
         action="UPDATE_FINISH_STATUS",
         target_entity="finish",
         target_id=finish_id,
@@ -139,21 +161,24 @@ def update_finish_status(finish_id: str, payload: FinishStatusUpdate):
 
 
 @router.delete("/{finish_id}")
-def deactivate_finish(finish_id: str):
+async def deactivate_finish(finish_id: str, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Soft-deactivate finish (sets is_active to False). Never hard deletes if referenced by variants."""
-    existing = finishes_repo.find_by_id(finish_id)
+    finishes_repo = FinishesRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    existing = await finishes_repo.find_by_id(finish_id)
     if not existing:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Finish with ID '{finish_id}' not found.",
         )
 
-    finishes_repo.update(finish_id, {
+    await finishes_repo.update(finish_id, {
         "is_active": False,
         "updated_at": datetime.now(timezone.utc).isoformat(),
     })
 
-    audit_repo.log(
+    await audit_repo.log(
         action="DEACTIVATE_FINISH",
         target_entity="finish",
         target_id=finish_id,

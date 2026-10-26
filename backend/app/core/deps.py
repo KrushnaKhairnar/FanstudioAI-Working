@@ -1,9 +1,11 @@
 """
 Core dependencies for FastAPI routes.
 """
-from app.db.mongo import db_manager, MongoDBManager
+from motor.motor_asyncio import AsyncIOMotorDatabase
+
+from app.db.mongo import get_db as _get_db
 
 
-def get_db() -> MongoDBManager:
-    """Dependency providing active database manager."""
-    return db_manager
+async def get_db() -> AsyncIOMotorDatabase:
+    """Dependency providing the active Motor database."""
+    return _get_db()

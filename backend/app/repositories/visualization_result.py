@@ -2,20 +2,26 @@
 Visualization results repository.
 """
 from typing import Any, Dict, Optional
+
+from motor.motor_asyncio import AsyncIOMotorDatabase
+
 from app.repositories.base import BaseRepository, utc_now
 
 
 class VisualizationResultsRepository(BaseRepository):
-    def __init__(self):
-        super().__init__("visualization_results")
+    collection_name = "visualization_results"
+    id_field = "result_id"
 
-    def insert(self, data: Dict[str, Any]) -> Dict[str, Any]:
+    def __init__(self, db: AsyncIOMotorDatabase):
+        super().__init__(db)
+
+    async def insert(self, data: Dict[str, Any]) -> Dict[str, Any]:
         data.setdefault("created_at", utc_now())
-        self.collection.insert_one(data)
+        eid = data.get("result_id")
+        if eid:
+            data["_id"] = eid
+        await self.collection.insert_one(data)
         return data
 
-    def find_by_id(self, result_id: str) -> Optional[Dict[str, Any]]:
-        return self.collection.find_one({"result_id": result_id})
-
-
-vis_results_repo = VisualizationResultsRepository()
+    async def find_by_id(self, result_id: str) -> Optional[Dict[str, Any]]:
+        return await self.collection.find_one({"_id": result_id})

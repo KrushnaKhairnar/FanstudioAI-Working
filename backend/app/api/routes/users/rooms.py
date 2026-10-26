@@ -3,15 +3,17 @@ User Room Upload & Computer Vision Preprocessing Router.
 Accepts user room photos, runs OpenCV geometric and ambient lighting analysis,
 and stores preprocessed images for AI ceiling fan visualization compositing.
 """
+import asyncio
 import uuid
 import base64
-import time
 from datetime import datetime, timezone
 from typing import List, Optional, Dict, Any
-from fastapi import APIRouter, UploadFile, File, Form, HTTPException, status
+from fastapi import APIRouter, UploadFile, File, HTTPException, status, Depends
+from motor.motor_asyncio import AsyncIOMotorDatabase
 from pydantic import BaseModel, Field
 
-from app.repositories import rooms_repo
+from app.core.deps import get_db
+from app.repositories import RoomsRepository
 from app.services.image_processing import (
     validate_and_decode_image,
     analyze_room_geometry,
@@ -44,7 +46,10 @@ class Base64UploadRequest(BaseModel):
 
 
 @router.post("/upload", response_model=RoomUploadResponse, status_code=status.HTTP_201_CREATED)
-async def upload_room_file(file: UploadFile = File(...)):
+async def upload_room_file(
+    file: UploadFile = File(...),
+    db: AsyncIOMotorDatabase = Depends(get_db),
+):
     """
     Accepts multipart room photo upload (JPG, PNG, WEBP, max 10MB).
     Runs OpenCV preprocessing: auto-rotation, downsampling, and ceiling plane analysis.
@@ -57,16 +62,16 @@ async def upload_room_file(file: UploadFile = File(...)):
         )
 
     try:
-        cv_img, meta = validate_and_decode_image(contents)
+        cv_img, meta = await asyncio.to_thread(validate_and_decode_image, contents)
     except ValueError as e:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=str(e),
         )
 
-    analysis = analyze_room_geometry(cv_img)
+    analysis = await asyncio.to_thread(analyze_room_geometry, cv_img)
     room_id = str(uuid.uuid4())
-    img_url = save_processed_room(room_id, cv_img)
+    img_url = await asyncio.to_thread(save_processed_room, room_id, cv_img)
 
     now_iso = datetime.now(timezone.utc).isoformat()
     room_doc = {
@@ -78,7 +83,8 @@ async def upload_room_file(file: UploadFile = File(...)):
         "analysis": analysis,
         "created_at": now_iso,
     }
-    rooms_repo.insert(room_doc)
+    rooms_repo = RoomsRepository(db)
+    await rooms_repo.insert(room_doc)
 
     return RoomUploadResponse(
         room_id=room_id,
@@ -90,7 +96,10 @@ async def upload_room_file(file: UploadFile = File(...)):
 
 
 @router.post("/upload-base64", response_model=RoomUploadResponse, status_code=status.HTTP_201_CREATED)
-def upload_room_base64(payload: Base64UploadRequest):
+async def upload_room_base64(
+    payload: Base64UploadRequest,
+    db: AsyncIOMotorDatabase = Depends(get_db),
+):
     """Accepts base64 room photo data URI or raw base64 string."""
     raw_str = payload.image_base64
     if "," in raw_str:
@@ -98,16 +107,16 @@ def upload_room_base64(payload: Base64UploadRequest):
 
     try:
         raw_bytes = base64.b64decode(raw_str)
-        cv_img, meta = validate_and_decode_image(raw_bytes)
+        cv_img, meta = await asyncio.to_thread(validate_and_decode_image, raw_bytes)
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"Failed to process base64 image: {str(e)}",
         )
 
-    analysis = analyze_room_geometry(cv_img)
+    analysis = await asyncio.to_thread(analyze_room_geometry, cv_img)
     room_id = str(uuid.uuid4())
-    img_url = save_processed_room(room_id, cv_img)
+    img_url = await asyncio.to_thread(save_processed_room, room_id, cv_img)
 
     now_iso = datetime.now(timezone.utc).isoformat()
     room_doc = {
@@ -119,7 +128,8 @@ def upload_room_base64(payload: Base64UploadRequest):
         "analysis": analysis,
         "created_at": now_iso,
     }
-    rooms_repo.insert(room_doc)
+    rooms_repo = RoomsRepository(db)
+    await rooms_repo.insert(room_doc)
 
     return RoomUploadResponse(
         room_id=room_id,
@@ -131,9 +141,10 @@ def upload_room_base64(payload: Base64UploadRequest):
 
 
 @router.get("/{room_id}", response_model=RoomUploadResponse)
-def get_room(room_id: str):
+async def get_room(room_id: str, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Retrieve preprocessed room photo information and geometric analysis."""
-    doc = rooms_repo.find_by_id(room_id)
+    rooms_repo = RoomsRepository(db)
+    doc = await rooms_repo.find_by_id(room_id)
     if not doc:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,

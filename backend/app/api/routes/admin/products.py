@@ -5,13 +5,15 @@ Full CRUD, specifications, deactivation lifecycle, and bulk import.
 import uuid
 from datetime import datetime, timezone
 from typing import List, Optional, Literal, Dict, Any
-from fastapi import APIRouter, HTTPException, Query, status
+from fastapi import APIRouter, HTTPException, Query, status, Depends
+from motor.motor_asyncio import AsyncIOMotorDatabase
 from pydantic import BaseModel, Field
 
+from app.core.deps import get_db
 from app.repositories import (
-    products_repo,
-    finishes_repo,
-    audit_repo,
+    ProductsRepository,
+    FinishesRepository,
+    AuditLogsRepository,
 )
 from app.models.product import (
     FanProduct,
@@ -28,23 +30,26 @@ class ProductStatusUpdate(BaseModel):
 
 
 @router.get("", response_model=List[Dict[str, Any]])
-def list_products(
+async def list_products(
     status_filter: Optional[Literal["draft", "active", "inactive"]] = Query(None, alias="status"),
     skip: int = 0,
     limit: int = 500,
+    db: AsyncIOMotorDatabase = Depends(get_db),
 ):
     """List all products in catalog with optional status filtering."""
+    products_repo = ProductsRepository(db)
     if status_filter:
-        products = products_repo.find_by_status(status_filter, skip=skip, limit=limit)
+        products = await products_repo.find_by_status(status_filter, skip=skip, limit=limit)
     else:
-        products = products_repo.find_all(skip=skip, limit=limit)
+        products = await products_repo.find_all(skip=skip, limit=limit)
     return products
 
 
 @router.get("/{product_id}", response_model=Dict[str, Any])
-def get_product(product_id: str):
+async def get_product(product_id: str, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Retrieve a single fan product by its unique product_id UUID."""
-    product = products_repo.find_by_id(product_id)
+    products_repo = ProductsRepository(db)
+    product = await products_repo.find_by_id(product_id)
     if not product:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -54,9 +59,13 @@ def get_product(product_id: str):
 
 
 @router.post("", response_model=FanProduct, status_code=status.HTTP_201_CREATED)
-def create_product(payload: FanProductCreate):
+async def create_product(payload: FanProductCreate, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Create a new fan product in the catalog."""
-    existing_code = products_repo.find_by_code(payload.product_code)
+    products_repo = ProductsRepository(db)
+    finishes_repo = FinishesRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    existing_code = await products_repo.find_by_code(payload.product_code)
     if existing_code:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -64,14 +73,14 @@ def create_product(payload: FanProductCreate):
         )
 
     for mid in payload.motor_finish_ids:
-        if not finishes_repo.find_by_id(mid):
+        if not await finishes_repo.find_by_id(mid):
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail=f"Motor finish ID '{mid}' does not exist.",
             )
 
     for bid in payload.blade_finish_ids:
-        if not finishes_repo.find_by_id(bid):
+        if not await finishes_repo.find_by_id(bid):
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail=f"Blade finish ID '{bid}' does not exist.",
@@ -84,9 +93,9 @@ def create_product(payload: FanProductCreate):
     doc["created_at"] = now_iso
     doc["updated_at"] = now_iso
 
-    created = products_repo.insert(doc)
+    created = await products_repo.insert(doc)
 
-    audit_repo.log(
+    await audit_repo.log(
         action="CREATE_PRODUCT",
         target_entity="product",
         target_id=new_id,
@@ -97,9 +106,16 @@ def create_product(payload: FanProductCreate):
 
 
 @router.put("/{product_id}", response_model=FanProduct)
-def update_product(product_id: str, payload: FanProductUpdate):
+async def update_product(
+    product_id: str,
+    payload: FanProductUpdate,
+    db: AsyncIOMotorDatabase = Depends(get_db),
+):
     """Update existing fan product specification, status, or finish relationships."""
-    existing = products_repo.find_by_id(product_id)
+    products_repo = ProductsRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    existing = await products_repo.find_by_id(product_id)
     if not existing:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -107,7 +123,7 @@ def update_product(product_id: str, payload: FanProductUpdate):
         )
 
     if payload.product_code and payload.product_code != existing.get("product_code"):
-        duplicate = products_repo.find_by_code(payload.product_code)
+        duplicate = await products_repo.find_by_code(payload.product_code)
         if duplicate and duplicate.get("product_id") != product_id:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
@@ -117,14 +133,14 @@ def update_product(product_id: str, payload: FanProductUpdate):
     update_data = payload.model_dump(exclude_unset=True)
     update_data["updated_at"] = datetime.now(timezone.utc).isoformat()
 
-    updated = products_repo.update(product_id, update_data)
+    updated = await products_repo.update(product_id, update_data)
     if not updated:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Failed to persist product update.",
         )
 
-    audit_repo.log(
+    await audit_repo.log(
         action="UPDATE_PRODUCT",
         target_entity="product",
         target_id=product_id,
@@ -135,21 +151,28 @@ def update_product(product_id: str, payload: FanProductUpdate):
 
 
 @router.patch("/{product_id}/status", response_model=FanProduct)
-def update_product_status(product_id: str, payload: ProductStatusUpdate):
+async def update_product_status(
+    product_id: str,
+    payload: ProductStatusUpdate,
+    db: AsyncIOMotorDatabase = Depends(get_db),
+):
     """Transition product status between draft, active, and inactive."""
-    existing = products_repo.find_by_id(product_id)
+    products_repo = ProductsRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    existing = await products_repo.find_by_id(product_id)
     if not existing:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Product with ID '{product_id}' not found.",
         )
 
-    updated = products_repo.update(product_id, {
+    updated = await products_repo.update(product_id, {
         "status": payload.status,
         "updated_at": datetime.now(timezone.utc).isoformat(),
     })
 
-    audit_repo.log(
+    await audit_repo.log(
         action="UPDATE_PRODUCT_STATUS",
         target_entity="product",
         target_id=product_id,
@@ -160,18 +183,21 @@ def update_product_status(product_id: str, payload: ProductStatusUpdate):
 
 
 @router.delete("/{product_id}")
-def deactivate_product(product_id: str):
+async def deactivate_product(product_id: str, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Soft-deactivate product (sets status to inactive). Never hard-deletes active products."""
-    existing = products_repo.find_by_id(product_id)
+    products_repo = ProductsRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
+    existing = await products_repo.find_by_id(product_id)
     if not existing:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Product with ID '{product_id}' not found.",
         )
 
-    products_repo.soft_delete_or_deactivate(product_id)
+    await products_repo.soft_delete_or_deactivate(product_id)
 
-    audit_repo.log(
+    await audit_repo.log(
         action="DEACTIVATE_PRODUCT",
         target_entity="product",
         target_id=product_id,
@@ -186,8 +212,11 @@ def deactivate_product(product_id: str):
 
 
 @router.post("/batch-import")
-def batch_import_products(payload: Any):
+async def batch_import_products(payload: Any, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Bulk import products into the catalog."""
+    products_repo = ProductsRepository(db)
+    audit_repo = AuditLogsRepository(db)
+
     products_to_import = []
     if isinstance(payload, list):
         products_to_import = payload
@@ -206,7 +235,7 @@ def batch_import_products(payload: Any):
         p_id = item.get("product_id") or item.get("productId") or str(uuid.uuid4())
         fan_code = item.get("product_code") or item.get("fanCode") or p_id
         name = item.get("name") or item.get("fanName") or "Ceiling Fan"
-        
+
         motor_colors = item.get("motor_colors") or DEFAULT_MOTOR_COLORS
         blade_colors = item.get("blade_colors") or DEFAULT_BLADE_COLORS
         default_motor = item.get("default_motor_color") or motor_colors[0]
@@ -245,14 +274,14 @@ def batch_import_products(payload: Any):
         if "created_at" not in doc:
             doc["created_at"] = now_iso
 
-        existing = products_repo.find_by_id(p_id) or products_repo.find_by_code(fan_code)
+        existing = await products_repo.find_by_id(p_id) or await products_repo.find_by_code(fan_code)
         if existing:
-            products_repo.update(existing["product_id"], doc)
+            await products_repo.update(existing["product_id"], doc)
         else:
-            products_repo.insert(doc)
+            await products_repo.insert(doc)
         imported_count += 1
 
-    audit_repo.log(
+    await audit_repo.log(
         action="BATCH_IMPORT_PRODUCTS",
         target_entity="product",
         target_id="bulk",

@@ -3,6 +3,7 @@ User Visualization Orchestration Router.
 Implements the AI Job State Machine (QUEUED -> PROCESSING -> SUCCESS | FAILED)
 and composites ceiling fans into customer room photographs.
 """
+import asyncio
 import os
 import time
 import uuid
@@ -10,18 +11,18 @@ from datetime import datetime, timezone
 from typing import Optional, Dict, Any, List, Tuple
 import numpy as np
 import cv2
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, status, Depends
+from motor.motor_asyncio import AsyncIOMotorDatabase
 from pydantic import BaseModel, Field
 
+from app.core.deps import get_db
 from app.repositories import (
-    products_repo,
-    variants_repo,
-    finishes_repo,
-    media_repo,
-    ai_jobs_repo,
-    ai_config_repo,
-    rooms_repo,
-    vis_results_repo,
+    ProductsRepository,
+    VariantsRepository,
+    FinishesRepository,
+    AiJobsRepository,
+    RoomsRepository,
+    VisualizationResultsRepository,
 )
 from app.services.image_processing import (
     ROOMS_DIR,
@@ -63,16 +64,19 @@ class VisualizationJobResponse(BaseModel):
     metadata: Optional[Dict[str, Any]] = None
 
 
-def _get_or_create_variant_cutout(variant: Dict[str, Any], product: Dict[str, Any], size=600) -> np.ndarray:
+def _get_or_create_variant_cutout(
+    variant: Dict[str, Any],
+    product: Dict[str, Any],
+    motor_finish: Dict[str, Any],
+    blade_finish: Dict[str, Any],
+    size=600,
+) -> np.ndarray:
     """Retrieves or generates a 4-channel RGBA fan cutout matching the variant finishes."""
     transparent_url = variant.get("transparent_image_url")
     if transparent_url and os.path.exists(transparent_url):
         loaded = cv2.imread(transparent_url, cv2.IMREAD_UNCHANGED)
         if loaded is not None and loaded.shape[2] == 4:
             return loaded
-
-    motor_finish = finishes_repo.find_by_id(variant["motor_finish_id"]) or {}
-    blade_finish = finishes_repo.find_by_id(variant["blade_finish_id"]) or {}
 
     def hex_to_bgr(hex_code: str, default: Tuple[int, int, int]):
         hex_clean = hex_code.strip("#") if hex_code else ""
@@ -113,18 +117,96 @@ def _get_or_create_variant_cutout(variant: Dict[str, Any], product: Dict[str, An
     return fan_rgba
 
 
+def _load_room_bgr(room_id: Optional[str]) -> Tuple[Any, Dict[str, Any]]:
+    """Load room image and analysis; returns (room_bgr, room_analysis)."""
+    room_bgr = None
+    room_analysis: Dict[str, Any] = {}
+
+    if room_id:
+        local_path = os.path.join(ROOMS_DIR, f"{room_id}.jpg")
+        if os.path.exists(local_path):
+            room_bgr = cv2.imread(local_path)
+
+    if room_bgr is None:
+        default_path = os.path.join(ROOMS_DIR, "default_bedroom.jpg")
+        if os.path.exists(default_path):
+            room_bgr = cv2.imread(default_path)
+        else:
+            room_bgr = np.zeros((720, 1080, 3), dtype=np.uint8)
+            room_bgr[0:240, :] = [238, 242, 246]
+            room_bgr[240:720, :] = [185, 195, 205]
+            cv2.imwrite(default_path, room_bgr)
+        room_analysis = analyze_room_geometry(room_bgr)
+
+    return room_bgr, room_analysis
+
+
+def _render_visualization(
+    payload: VisualizationRequest,
+    product: Dict[str, Any],
+    variant: Dict[str, Any],
+    motor_finish: Dict[str, Any],
+    blade_finish: Dict[str, Any],
+    room_analysis: Dict[str, Any],
+    room_id: Optional[str],
+) -> Tuple[Any, Dict[str, Any], str, str]:
+    """Blocking render pipeline: composite fan into room and write result JPEG."""
+    room_bgr, loaded_analysis = _load_room_bgr(room_id)
+    if not room_analysis:
+        room_analysis = loaded_analysis
+
+    anchor_x = payload.anchor_x if payload.anchor_x is not None else room_analysis.get("ceiling_center_x", 0.50)
+    anchor_y = payload.anchor_y if payload.anchor_y is not None else room_analysis.get("ceiling_center_y", 0.24)
+
+    ambient_brightness = float(room_analysis.get("ambient_brightness", 0.70))
+    color_temp_kelvin = int(room_analysis.get("color_temp_kelvin", 4500))
+
+    fan_rgba = _get_or_create_variant_cutout(variant, product, motor_finish, blade_finish)
+
+    composite_bgr, meta = transform_and_composite_fan(
+        room_bgr=room_bgr,
+        fan_rgba=fan_rgba,
+        anchor_x_ratio=anchor_x,
+        anchor_y_ratio=anchor_y,
+        scale_factor=payload.scale_factor,
+        rotation_deg=payload.rotation_deg,
+        perspective_pitch=payload.perspective_pitch,
+        ambient_brightness=ambient_brightness,
+        color_temp_kelvin=color_temp_kelvin,
+        apply_lighting=payload.apply_lighting,
+        apply_shadow=payload.apply_shadow,
+    )
+
+    result_id = str(uuid.uuid4())
+    result_filename = f"{result_id}.jpg"
+    result_filepath = os.path.join(VISUALIZATIONS_DIR, result_filename)
+    cv2.imwrite(result_filepath, composite_bgr, [cv2.IMWRITE_JPEG_QUALITY, 94])
+
+    result_url = f"/api/static/visualizations/{result_filename}"
+    return composite_bgr, meta, result_id, result_url
+
+
 @router.post("", response_model=VisualizationJobResponse, status_code=status.HTTP_201_CREATED)
-def create_visualization_job(payload: VisualizationRequest):
+async def create_visualization_job(
+    payload: VisualizationRequest,
+    db: AsyncIOMotorDatabase = Depends(get_db),
+):
     """
     Main AI Room Visualization endpoint.
     Executes the job state machine (QUEUED -> PROCESSING -> SUCCESS / FAILED)
     and composites the selected fan variant into the room photo.
     """
+    products_repo = ProductsRepository(db)
+    variants_repo = VariantsRepository(db)
+    finishes_repo = FinishesRepository(db)
+    rooms_repo = RoomsRepository(db)
+    ai_jobs_repo = AiJobsRepository(db)
+    vis_results_repo = VisualizationResultsRepository(db)
+
     start_time = time.time()
     job_id = str(uuid.uuid4())
     now_iso = datetime.now(timezone.utc).isoformat()
 
-    # 1. State: QUEUED
     job_doc = {
         "job_id": job_id,
         "status": "QUEUED",
@@ -133,74 +215,42 @@ def create_visualization_job(payload: VisualizationRequest):
         "created_at": now_iso,
         "updated_at": now_iso,
     }
-    ai_jobs_repo.create_job(job_doc)
+    await ai_jobs_repo.create_job(job_doc)
 
-    # 2. State: PROCESSING
-    ai_jobs_repo.update_status(job_id, "PROCESSING")
+    await ai_jobs_repo.update_status(job_id, "PROCESSING")
 
     try:
-        product = products_repo.find_by_id(payload.product_id)
+        product = await products_repo.find_by_id(payload.product_id)
         if not product or product.get("status") != "active":
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product not found or not active")
 
-        variant = variants_repo.find_by_id(payload.variant_id)
+        variant = await variants_repo.find_by_id(payload.variant_id)
         if not variant or not variant.get("is_active", True) or variant.get("product_id") != payload.product_id:
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Selected variant is not valid for this product")
 
-        room_bgr = None
-        room_analysis = {}
-
+        room_analysis: Dict[str, Any] = {}
         if payload.room_id:
-            room_record = rooms_repo.find_by_id(payload.room_id)
+            room_record = await rooms_repo.find_by_id(payload.room_id)
             if room_record:
                 room_analysis = room_record.get("analysis", {})
-                local_path = os.path.join(ROOMS_DIR, f"{payload.room_id}.jpg")
-                if os.path.exists(local_path):
-                    room_bgr = cv2.imread(local_path)
 
-        if room_bgr is None:
-            default_path = os.path.join(ROOMS_DIR, "default_bedroom.jpg")
-            if os.path.exists(default_path):
-                room_bgr = cv2.imread(default_path)
-            else:
-                room_bgr = np.zeros((720, 1080, 3), dtype=np.uint8)
-                room_bgr[0:240, :] = [238, 242, 246]
-                room_bgr[240:720, :] = [185, 195, 205]
-                cv2.imwrite(default_path, room_bgr)
-            room_analysis = analyze_room_geometry(room_bgr)
+        motor_finish = await finishes_repo.find_by_id(variant["motor_finish_id"]) or {}
+        blade_finish = await finishes_repo.find_by_id(variant["blade_finish_id"]) or {}
 
-        anchor_x = payload.anchor_x if payload.anchor_x is not None else room_analysis.get("ceiling_center_x", 0.50)
-        anchor_y = payload.anchor_y if payload.anchor_y is not None else room_analysis.get("ceiling_center_y", 0.24)
-
-        ambient_brightness = float(room_analysis.get("ambient_brightness", 0.70))
-        color_temp_kelvin = int(room_analysis.get("color_temp_kelvin", 4500))
-
-        fan_rgba = _get_or_create_variant_cutout(variant, product)
-
-        composite_bgr, meta = transform_and_composite_fan(
-            room_bgr=room_bgr,
-            fan_rgba=fan_rgba,
-            anchor_x_ratio=anchor_x,
-            anchor_y_ratio=anchor_y,
-            scale_factor=payload.scale_factor,
-            rotation_deg=payload.rotation_deg,
-            perspective_pitch=payload.perspective_pitch,
-            ambient_brightness=ambient_brightness,
-            color_temp_kelvin=color_temp_kelvin,
-            apply_lighting=payload.apply_lighting,
-            apply_shadow=payload.apply_shadow,
+        _, meta, result_id, result_url = await asyncio.to_thread(
+            _render_visualization,
+            payload,
+            product,
+            variant,
+            motor_finish,
+            blade_finish,
+            room_analysis,
+            payload.room_id,
         )
 
-        result_id = str(uuid.uuid4())
-        result_filename = f"{result_id}.jpg"
-        result_filepath = os.path.join(VISUALIZATIONS_DIR, result_filename)
-        cv2.imwrite(result_filepath, composite_bgr, [cv2.IMWRITE_JPEG_QUALITY, 94])
-
-        result_url = f"/api/static/visualizations/{result_filename}"
         render_time = round((time.time() - start_time) * 1000, 2)
 
-        # 3. State: SUCCESS
-        ai_jobs_repo.update_job(job_id, {
+        await ai_jobs_repo.update_job(job_id, {
             "status": "SUCCESS",
             "result_id": result_id,
             "result_url": result_url,
@@ -208,7 +258,7 @@ def create_visualization_job(payload: VisualizationRequest):
             "metadata": meta,
         })
 
-        vis_results_repo.insert({
+        await vis_results_repo.insert({
             "result_id": result_id,
             "job_id": job_id,
             "product_id": payload.product_id,
@@ -228,10 +278,10 @@ def create_visualization_job(payload: VisualizationRequest):
         )
 
     except HTTPException:
-        ai_jobs_repo.update_status(job_id, "FAILED", error="Validation error")
+        await ai_jobs_repo.update_status(job_id, "FAILED", error="Validation error")
         raise
     except Exception as e:
-        ai_jobs_repo.update_status(job_id, "FAILED", error=str(e))
+        await ai_jobs_repo.update_status(job_id, "FAILED", error=str(e))
         return VisualizationJobResponse(
             job_id=job_id,
             status="FAILED",
@@ -242,9 +292,10 @@ def create_visualization_job(payload: VisualizationRequest):
 
 
 @router.get("/jobs/{job_id}", response_model=VisualizationJobResponse)
-def get_visualization_job(job_id: str):
+async def get_visualization_job(job_id: str, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Query job status and rendered result."""
-    job = ai_jobs_repo.find_by_id(job_id)
+    ai_jobs_repo = AiJobsRepository(db)
+    job = await ai_jobs_repo.find_by_id(job_id)
     if not job:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -254,9 +305,10 @@ def get_visualization_job(job_id: str):
 
 
 @router.get("/results/{result_id}")
-def get_visualization_result(result_id: str):
+async def get_visualization_result(result_id: str, db: AsyncIOMotorDatabase = Depends(get_db)):
     """Retrieve rendered visualization result metadata and download link."""
-    doc = vis_results_repo.find_by_id(result_id)
+    vis_results_repo = VisualizationResultsRepository(db)
+    doc = await vis_results_repo.find_by_id(result_id)
     if not doc:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
