@@ -1,0 +1,5617 @@
+[{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be0d"
+  },
+  "fanCode": "AIREX_8_BLADES",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:39.899Z"
+  },
+  "fanName": "AIREX 8 BLADES",
+  "imagePath": "uploads/fans/AIREX_8_BLADES/AIREX_8_BLADES_hero_1.png",
+  "images": [
+    "uploads/fans/AIREX_8_BLADES/AIREX_8_BLADES_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\"",
+      "52\"",
+      "56\"",
+      "60\" DEFAULT",
+      "72\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0001",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 4,
+    "endRow": 13
+  },
+  "updatedAt": {
+    "$date": "2026-06-04T15:07:34.745Z"
+  },
+  "fanNameLower": "airex 8 blades"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be0e"
+  },
+  "fanCode": "AASHI_MINIO",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:40.239Z"
+  },
+  "fanName": "AASHI MINIO",
+  "imagePath": "uploads/fans/AASHI_MINIO/AASHI_MINIO_hero_1.png",
+  "images": [
+    "uploads/fans/AASHI_MINIO/AASHI_MINIO_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "8\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard color without brass blades",
+      "Standard colors with brass blade"
+    ]
+  },
+  "productId": "FAN-0002",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 13,
+    "endRow": 22
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T07:55:27.927Z"
+  },
+  "fanNameLower": "aashi minio"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be0f"
+  },
+  "fanCode": "ASTER",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:40.586Z"
+  },
+  "fanName": "ASTER",
+  "imagePath": "uploads/fans/ASTER/ASTER_hero_1.jpg",
+  "images": [
+    "uploads/fans/ASTER/ASTER_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36''",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0003",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 22,
+    "endRow": 31
+  },
+  "updatedAt": {
+    "$date": "2026-06-04T15:13:24.826Z"
+  },
+  "fanNameLower": "aster"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be10"
+  },
+  "fanCode": "ANTONIOUS",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:40.934Z"
+  },
+  "fanName": "ANTONIOUS",
+  "imagePath": "uploads/fans/ANTONIOUS/ANTONIOUS_hero_1.png",
+  "images": [
+    "uploads/fans/ANTONIOUS/ANTONIOUS_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0004",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 31,
+    "endRow": 40
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T05:59:43.119Z"
+  },
+  "fanNameLower": "antonious"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be11"
+  },
+  "fanCode": "ANTONIOUS_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:41.285Z"
+  },
+  "fanName": "ANTONIOUS BLDC",
+  "imagePath": "uploads/fans/ANTONIOUS_BLDC/ANTONIOUS_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/ANTONIOUS_BLDC/ANTONIOUS_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0005",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 40,
+    "endRow": 49
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:09:06.899Z"
+  },
+  "fanNameLower": "antonious bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be12"
+  },
+  "fanCode": "ASPIRE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:41.617Z"
+  },
+  "fanName": "ASPIRE",
+  "imagePath": "uploads/fans/ASPIRE/ASPIRE_hero_1.png",
+  "images": [
+    "uploads/fans/ASPIRE/ASPIRE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0006",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 49,
+    "endRow": 58
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:10:07.365Z"
+  },
+  "fanNameLower": "aspire"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be13"
+  },
+  "fanCode": "ASPIRE_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:41.945Z"
+  },
+  "fanName": "ASPIRE BLDC",
+  "imagePath": "uploads/fans/ASPIRE_BLDC/ASPIRE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/ASPIRE_BLDC/ASPIRE_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0007",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 58,
+    "endRow": 67
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T06:07:31.572Z"
+  },
+  "fanNameLower": "aspire bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be14"
+  },
+  "fanCode": "AVIATOR_3_BLADE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:42.182Z"
+  },
+  "fanName": "AVIATOR 3 BLADE",
+  "imagePath": "uploads/fans/AVIATOR_3_BLADE/AVIATOR_3_BLADE_hero_1.jpg",
+  "images": [
+    "uploads/fans/AVIATOR_3_BLADE/AVIATOR_3_BLADE_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "50\" DEFAULT",
+      "60\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0008",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 67,
+    "endRow": 76
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:11:08.945Z"
+  },
+  "fanNameLower": "aviator 3 blade"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be15"
+  },
+  "fanCode": "AVIATOR_2_BLADE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:42.427Z"
+  },
+  "fanName": "AVIATOR 2 BLADE",
+  "imagePath": "uploads/fans/AVIATOR_2_BLADE/AVIATOR_2_BLADE_hero_1.png",
+  "images": [
+    "uploads/fans/AVIATOR_2_BLADE/AVIATOR_2_BLADE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "50\" DEFAULT",
+      "60\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0009",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 76,
+    "endRow": 85
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:11:28.179Z"
+  },
+  "fanNameLower": "aviator 2 blade"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be16"
+  },
+  "fanCode": "AVIATOR_POP",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:42.682Z"
+  },
+  "fanName": "AVIATOR POP",
+  "imagePath": "uploads/fans/AVIATOR_POP/AVIATOR_POP_hero_1.png",
+  "images": [
+    "uploads/fans/AVIATOR_POP/AVIATOR_POP_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "50\" DEFAULT",
+      "60\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0010",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 85,
+    "endRow": 94
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:11:53.751Z"
+  },
+  "fanNameLower": "aviator pop"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be17"
+  },
+  "fanCode": "ALTIS",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:43.050Z"
+  },
+  "fanName": "ALTIS",
+  "imagePath": "uploads/fans/ALTIS/ALTIS_hero_1.jpg",
+  "images": [
+    "uploads/fans/ALTIS/ALTIS_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0011",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 94,
+    "endRow": 103
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:12:46.094Z"
+  },
+  "fanNameLower": "altis"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be18"
+  },
+  "fanCode": "ALASKA",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:43.422Z"
+  },
+  "fanName": "ALASKA",
+  "imagePath": "uploads/fans/ALASKA/ALASKA_hero_1.png",
+  "images": [
+    "uploads/fans/ALASKA/ALASKA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden blades with standard color"
+    ]
+  },
+  "productId": "FAN-0012",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 103,
+    "endRow": 112
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:14:06.385Z"
+  },
+  "fanNameLower": "alaska"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be19"
+  },
+  "fanCode": "ALASKA_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:43.779Z"
+  },
+  "fanName": "ALASKA BLDC",
+  "imagePath": "uploads/fans/ALASKA_BLDC/ALASKA_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/ALASKA_BLDC/ALASKA_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden blades with standard color"
+    ]
+  },
+  "productId": "FAN-0013",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 112,
+    "endRow": 121
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:14:35.600Z"
+  },
+  "fanNameLower": "alaska bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be1a"
+  },
+  "fanCode": "AMAZE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:44.119Z"
+  },
+  "fanName": "AMAZE",
+  "imagePath": "uploads/fans/AMAZE/AMAZE_hero_1.png",
+  "images": [
+    "uploads/fans/AMAZE/AMAZE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0014",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 121,
+    "endRow": 130
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:15:11.853Z"
+  },
+  "fanNameLower": "amaze"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be1b"
+  },
+  "fanCode": "ALPHA",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:44.485Z"
+  },
+  "fanName": "ALPHA",
+  "imagePath": "uploads/fans/ALPHA/ALPHA_hero_1.jpg",
+  "images": [
+    "uploads/fans/ALPHA/ALPHA_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0015",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 130,
+    "endRow": 139
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:16:12.769Z"
+  },
+  "fanNameLower": "alpha"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be1c"
+  },
+  "fanCode": "ARISTOCRAT",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:44.808Z"
+  },
+  "fanName": "ARISTOCRAT",
+  "imagePath": "uploads/fans/ARISTOCRAT/ARISTOCRAT_hero_1.png",
+  "images": [
+    "uploads/fans/ARISTOCRAT/ARISTOCRAT_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\"",
+      "56\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0016",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 139,
+    "endRow": 148
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:35:33.975Z"
+  },
+  "fanNameLower": "aristocrat"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be1d"
+  },
+  "fanCode": "ARISTOCRAT_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:45.136Z"
+  },
+  "fanName": "ARISTOCRAT BLDC",
+  "imagePath": "uploads/fans/ARISTOCRAT_BLDC/ARISTOCRAT_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/ARISTOCRAT_BLDC/ARISTOCRAT_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0017",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 148,
+    "endRow": 157
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:36:00.749Z"
+  },
+  "fanNameLower": "aristocrat bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be1e"
+  },
+  "fanCode": "BOLD",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:45.512Z"
+  },
+  "fanName": "BOLD",
+  "imagePath": "uploads/fans/BOLD/BOLD_hero_1.jpg",
+  "images": [
+    "uploads/fans/BOLD/BOLD_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden blades with standard color"
+    ]
+  },
+  "productId": "FAN-0018",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 157,
+    "endRow": 166
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:37:08.012Z"
+  },
+  "fanNameLower": "bold"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be1f"
+  },
+  "fanCode": "BOLD_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:46.181Z"
+  },
+  "fanName": "BOLD BLDC",
+  "imagePath": "uploads/fans/BOLD_BLDC/BOLD_BLDC_hero_1.jpg",
+  "images": [
+    "uploads/fans/BOLD_BLDC/BOLD_BLDC_hero_1.jpg",
+    "uploads/fans/BOLD_BLDC/BOLD_BLDC_hero_2.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden blades with standard color"
+    ]
+  },
+  "productId": "FAN-0019",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 166,
+    "endRow": 184
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:40:58.391Z"
+  },
+  "fanNameLower": "bold bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be20"
+  },
+  "fanCode": "BANTAM",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:46.515Z"
+  },
+  "fanName": "BANTAM",
+  "imagePath": "uploads/fans/BANTAM/BANTAM_hero_1.png",
+  "images": [
+    "uploads/fans/BANTAM/BANTAM_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\" DEFAULT",
+      "36\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0020",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 184,
+    "endRow": 193
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:42:22.946Z"
+  },
+  "fanNameLower": "bantam"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be21"
+  },
+  "fanCode": "BELLEZA",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:46.768Z"
+  },
+  "fanName": "BELLEZA",
+  "imagePath": "uploads/fans/BELLEZA/BELLEZA_hero_1.png",
+  "images": [
+    "uploads/fans/BELLEZA/BELLEZA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "50\" DEFAULT",
+      "50\" Groove"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0021",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 193,
+    "endRow": 202
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:42:47.217Z"
+  },
+  "fanNameLower": "belleza"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be22"
+  },
+  "fanCode": "BACCA_WALL",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:47.030Z"
+  },
+  "fanName": "BACCA WALL",
+  "imagePath": "uploads/fans/BACCA_WALL/BACCA_WALL_hero_1.png",
+  "images": [
+    "uploads/fans/BACCA_WALL/BACCA_WALL_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "30\"",
+      "34\" DEFAULT",
+      "36\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0022",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 202,
+    "endRow": 211
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:43:19.958Z"
+  },
+  "fanNameLower": "bacca wall"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be23"
+  },
+  "fanCode": "BACCA_CEILING",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:47.273Z"
+  },
+  "fanName": "BACCA CEILING",
+  "imagePath": "uploads/fans/BACCA_CEILING/BACCA_CEILING_hero_1.png",
+  "images": [
+    "uploads/fans/BACCA_CEILING/BACCA_CEILING_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "30\"",
+      "34\" DEFAULT",
+      "36\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0023",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 211,
+    "endRow": 220
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:43:45.734Z"
+  },
+  "fanNameLower": "bacca ceiling"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be24"
+  },
+  "fanCode": "BOMBAY_FAN",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:47.637Z"
+  },
+  "fanName": "BOMBAY FAN",
+  "imagePath": "uploads/fans/BOMBAY_FAN/BOMBAY_FAN_hero_1.jpg",
+  "images": [
+    "uploads/fans/BOMBAY_FAN/BOMBAY_FAN_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "12\"",
+      "16\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0024",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 220,
+    "endRow": 229
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:45:05.229Z"
+  },
+  "fanNameLower": "bombay fan"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be25"
+  },
+  "fanCode": "BOMBAY_FAN_WITH_MESH",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:48.001Z"
+  },
+  "fanName": "BOMBAY FAN WITH MESH",
+  "imagePath": "uploads/fans/BOMBAY_FAN_WITH_MESH/BOMBAY_FAN_WITH_MESH_hero_1.jpg",
+  "images": [
+    "uploads/fans/BOMBAY_FAN_WITH_MESH/BOMBAY_FAN_WITH_MESH_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "12\"",
+      "16\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0025",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 229,
+    "endRow": 238
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:45:41.687Z"
+  },
+  "fanNameLower": "bombay fan with mesh"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be26"
+  },
+  "fanCode": "BOSSINI",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:48.327Z"
+  },
+  "fanName": "BOSSINI",
+  "imagePath": "uploads/fans/BOSSINI/BOSSINI_hero_1.png",
+  "images": [
+    "uploads/fans/BOSSINI/BOSSINI_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0026",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 238,
+    "endRow": 247
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T05:59:48.405Z"
+  },
+  "fanNameLower": "bossini"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be27"
+  },
+  "fanCode": "BOSSINI_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:48.658Z"
+  },
+  "fanName": "BOSSINI BLDC",
+  "imagePath": "uploads/fans/BOSSINI_BLDC/BOSSINI_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/BOSSINI_BLDC/BOSSINI_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0027",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 247,
+    "endRow": 256
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:47:17.186Z"
+  },
+  "fanNameLower": "bossini bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be28"
+  },
+  "fanCode": "BLISS",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:48.993Z"
+  },
+  "fanName": "BLISS",
+  "imagePath": "uploads/fans/BLISS/BLISS_hero_1.png",
+  "images": [
+    "uploads/fans/BLISS/BLISS_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0028",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 256,
+    "endRow": 265
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:48:17.133Z"
+  },
+  "fanNameLower": "bliss"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be29"
+  },
+  "fanCode": "BLISS_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:49.326Z"
+  },
+  "fanName": "BLISS BLDC",
+  "imagePath": "uploads/fans/BLISS_BLDC/BLISS_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/BLISS_BLDC/BLISS_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0029",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 265,
+    "endRow": 274
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:48:44.740Z"
+  },
+  "fanNameLower": "bliss bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be2a"
+  },
+  "fanCode": "BELLERINA",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:49.661Z"
+  },
+  "fanName": "BELLERINA",
+  "imagePath": "uploads/fans/BELLERINA/BELLERINA_hero_1.png",
+  "images": [
+    "uploads/fans/BELLERINA/BELLERINA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0030",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 274,
+    "endRow": 283
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:50:02.731Z"
+  },
+  "fanNameLower": "bellerina"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be2b"
+  },
+  "fanCode": "CASCADE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:50.014Z"
+  },
+  "fanName": "CASCADE",
+  "imagePath": "uploads/fans/CASCADE/CASCADE_hero_1.png",
+  "images": [
+    "uploads/fans/CASCADE/CASCADE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden blades with standard color"
+    ]
+  },
+  "productId": "FAN-0031",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 283,
+    "endRow": 292
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:51:01.919Z"
+  },
+  "fanNameLower": "cascade"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be2c"
+  },
+  "fanCode": "CROWN_VINTAGE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:50.369Z"
+  },
+  "fanName": "CROWN VINTAGE",
+  "imagePath": "uploads/fans/CROWN_VINTAGE/CROWN_VINTAGE_hero_1.png",
+  "images": [
+    "uploads/fans/CROWN_VINTAGE/CROWN_VINTAGE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0032",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 292,
+    "endRow": 301
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:51:55.006Z"
+  },
+  "fanNameLower": "crown vintage"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be2d"
+  },
+  "fanCode": "CRESCENT",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:50.734Z"
+  },
+  "fanName": "CRESCENT",
+  "imagePath": "uploads/fans/CRESCENT/CRESCENT_hero_1.png",
+  "images": [
+    "uploads/fans/CRESCENT/CRESCENT_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0033",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 301,
+    "endRow": 310
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:52:53.632Z"
+  },
+  "fanNameLower": "crescent"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be2e"
+  },
+  "fanCode": "CRESCENT_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:51.093Z"
+  },
+  "fanName": "CRESCENT BLDC",
+  "imagePath": "uploads/fans/CRESCENT_BLDC/CRESCENT_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/CRESCENT_BLDC/CRESCENT_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0034",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 310,
+    "endRow": 319
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T05:59:51.910Z"
+  },
+  "fanNameLower": "crescent bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be2f"
+  },
+  "fanCode": "COPTER",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:51.428Z"
+  },
+  "fanName": "COPTER",
+  "imagePath": "uploads/fans/COPTER/COPTER_hero_1.jpg",
+  "images": [
+    "uploads/fans/COPTER/COPTER_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0035",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 319,
+    "endRow": 328
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:54:15.149Z"
+  },
+  "fanNameLower": "copter"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be30"
+  },
+  "fanCode": "DIVA_5BLADE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:51.783Z"
+  },
+  "fanName": "DIVA 5BLADE",
+  "imagePath": "uploads/fans/DIVA_5BLADE/DIVA_5BLADE_hero_1.png",
+  "images": [
+    "uploads/fans/DIVA_5BLADE/DIVA_5BLADE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\"",
+      "56\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0036",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 328,
+    "endRow": 337
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:01:05.683Z"
+  },
+  "fanNameLower": "diva 5blade"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be31"
+  },
+  "fanCode": "DIVA_5BLADE_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:52.157Z"
+  },
+  "fanName": "DIVA 5BLADE BLDC",
+  "imagePath": "uploads/fans/DIVA_5BLADE_BLDC/DIVA_5BLADE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/DIVA_5BLADE_BLDC/DIVA_5BLADE_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0037",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 337,
+    "endRow": 346
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T15:21:45.109Z"
+  },
+  "fanNameLower": "diva 5blade bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be32"
+  },
+  "fanCode": "DESIRE_CANE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:52.516Z"
+  },
+  "fanName": "DESIRE CANE",
+  "imagePath": "uploads/fans/DESIRE_CANE/DESIRE_CANE_hero_1.png",
+  "images": [
+    "uploads/fans/DESIRE_CANE/DESIRE_CANE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden blades with standard color"
+    ]
+  },
+  "productId": "FAN-0038",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 346,
+    "endRow": 355
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:06:19.010Z"
+  },
+  "fanNameLower": "desire cane"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be33"
+  },
+  "fanCode": "DESIRE_CANE_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:52.874Z"
+  },
+  "fanName": "DESIRE CANE BLDC",
+  "imagePath": "uploads/fans/DESIRE_CANE_BLDC/DESIRE_CANE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/DESIRE_CANE_BLDC/DESIRE_CANE_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden blades with standard color"
+    ]
+  },
+  "productId": "FAN-0039",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 355,
+    "endRow": 364
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:07:00.213Z"
+  },
+  "fanNameLower": "desire cane bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be34"
+  },
+  "fanCode": "DIVA_CANE_5_BLADE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:53.159Z"
+  },
+  "fanName": "DIVA CANE 5 BLADE",
+  "imagePath": "uploads/fans/DIVA_CANE_5_BLADE/DIVA_CANE_5_BLADE_hero_1.jpg",
+  "images": [
+    "uploads/fans/DIVA_CANE_5_BLADE/DIVA_CANE_5_BLADE_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT",
+      "52\"",
+      "56\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0040",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 364,
+    "endRow": 373
+  },
+  "updatedAt": {
+    "$date": "2026-06-08T09:54:19.685Z"
+  },
+  "fanNameLower": "diva cane 5 blade"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be35"
+  },
+  "fanCode": "DIVA_CANE_5_BLADE_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:53.437Z"
+  },
+  "fanName": "DIVA CANE 5 BLADE BLDC",
+  "imagePath": "uploads/fans/DIVA_CANE_5_BLADE_BLDC/DIVA_CANE_5_BLADE_BLDC_hero_1.jpg",
+  "images": [
+    "uploads/fans/DIVA_CANE_5_BLADE_BLDC/DIVA_CANE_5_BLADE_BLDC_hero_1.jpg",
+    "uploads/fans/DIVA_CANE_5_BLADE_BLDC/DIVA_CANE_5_BLADE_BLDC_hero_2.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0041",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 373,
+    "endRow": 391
+  },
+  "updatedAt": {
+    "$date": "2026-08-28T12:20:53.859Z"
+  },
+  "fanNameLower": "diva cane 5 blade bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be36"
+  },
+  "fanCode": "DESIRE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:53.783Z"
+  },
+  "fanName": "DESIRE",
+  "imagePath": "uploads/fans/DESIRE/DESIRE_hero_1.png",
+  "images": [
+    "uploads/fans/DESIRE/DESIRE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0042",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 391,
+    "endRow": 400
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:14:52.208Z"
+  },
+  "fanNameLower": "desire"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be37"
+  },
+  "fanCode": "DESIRE_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:54.151Z"
+  },
+  "fanName": "DESIRE BLDC",
+  "imagePath": "uploads/fans/DESIRE_BLDC/DESIRE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/DESIRE_BLDC/DESIRE_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0043",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 400,
+    "endRow": 409
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:15:15.400Z"
+  },
+  "fanNameLower": "desire bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be38"
+  },
+  "fanCode": "DYNASTY",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:54.507Z"
+  },
+  "fanName": "DYNASTY",
+  "imagePath": "uploads/fans/DYNASTY/DYNASTY_hero_1.jpg",
+  "images": [
+    "uploads/fans/DYNASTY/DYNASTY_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0044",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 409,
+    "endRow": 418
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:16:04.583Z"
+  },
+  "fanNameLower": "dynasty"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be39"
+  },
+  "fanCode": "DYNASTY_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:54.858Z"
+  },
+  "fanName": "DYNASTY BLDC",
+  "imagePath": "uploads/fans/DYNASTY_BLDC/DYNASTY_BLDC_hero_1.jpg",
+  "images": [
+    "uploads/fans/DYNASTY_BLDC/DYNASTY_BLDC_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0045",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 418,
+    "endRow": 427
+  },
+  "updatedAt": {
+    "$date": "2026-06-08T09:55:03.431Z"
+  },
+  "fanNameLower": "dynasty bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be3a"
+  },
+  "fanCode": "EDEN_LEATHER",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:55.222Z"
+  },
+  "fanName": "EDEN LEATHER",
+  "imagePath": "uploads/fans/EDEN_LEATHER/EDEN_LEATHER_hero_1.jpg",
+  "images": [
+    "uploads/fans/EDEN_LEATHER/EDEN_LEATHER_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0046",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 427,
+    "endRow": 436
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T05:42:21.190Z"
+  },
+  "fanNameLower": "eden leather"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be3b"
+  },
+  "fanCode": "ERA",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:55.577Z"
+  },
+  "fanName": "ERA",
+  "imagePath": "uploads/fans/ERA/ERA_hero_1.png",
+  "images": [
+    "uploads/fans/ERA/ERA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0047",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 436,
+    "endRow": 445
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:18:37.139Z"
+  },
+  "fanNameLower": "era"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be3c"
+  },
+  "fanCode": "ERA_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:55.956Z"
+  },
+  "fanName": "ERA BLDC",
+  "imagePath": "uploads/fans/ERA_BLDC/ERA_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/ERA_BLDC/ERA_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0048",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 445,
+    "endRow": 454
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T15:29:21.304Z"
+  },
+  "fanNameLower": "era bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be3d"
+  },
+  "fanCode": "ESTELLA",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:56.230Z"
+  },
+  "fanName": "ESTELLA",
+  "imagePath": "uploads/fans/ESTELLA/ESTELLA_hero_1.png",
+  "images": [
+    "uploads/fans/ESTELLA/ESTELLA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0049",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 454,
+    "endRow": 463
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:19:28.679Z"
+  },
+  "fanNameLower": "estella"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be3e"
+  },
+  "fanCode": "EMINENT",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:56.565Z"
+  },
+  "fanName": "EMINENT",
+  "imagePath": "uploads/fans/EMINENT/EMINENT_hero_1.png",
+  "images": [
+    "uploads/fans/EMINENT/EMINENT_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0050",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 463,
+    "endRow": 472
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:25:24.958Z"
+  },
+  "fanNameLower": "eminent"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be3f"
+  },
+  "fanCode": "EMINENT_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:56.905Z"
+  },
+  "fanName": "EMINENT BLDC",
+  "imagePath": "uploads/fans/EMINENT_BLDC/EMINENT_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/EMINENT_BLDC/EMINENT_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0051",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 472,
+    "endRow": 481
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T15:31:12.985Z"
+  },
+  "fanNameLower": "eminent bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be40"
+  },
+  "fanCode": "EVA",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:57.237Z"
+  },
+  "fanName": "EVA",
+  "imagePath": "uploads/fans/EVA/EVA_hero_1.png",
+  "images": [
+    "uploads/fans/EVA/EVA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0052",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 481,
+    "endRow": 490
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:26:21.749Z"
+  },
+  "fanNameLower": "eva"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be41"
+  },
+  "fanCode": "FLORENCE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:57.520Z"
+  },
+  "fanName": "FLORENCE",
+  "imagePath": "uploads/fans/FLORENCE/FLORENCE_hero_1.png",
+  "images": [
+    "uploads/fans/FLORENCE/FLORENCE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0053",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 490,
+    "endRow": 499
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:31:07.787Z"
+  },
+  "fanNameLower": "florence"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be42"
+  },
+  "fanCode": "FLORENCE_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:57.793Z"
+  },
+  "fanName": "FLORENCE BLDC",
+  "imagePath": "uploads/fans/FLORENCE_BLDC/FLORENCE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/FLORENCE_BLDC/FLORENCE_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0054",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 499,
+    "endRow": 508
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:31:18.743Z"
+  },
+  "fanNameLower": "florence bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be43"
+  },
+  "fanCode": "GRACE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:58.153Z"
+  },
+  "fanName": "GRACE",
+  "imagePath": "uploads/fans/GRACE/GRACE_hero_1.jpg",
+  "images": [
+    "uploads/fans/GRACE/GRACE_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0055",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 508,
+    "endRow": 517
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:32:03.420Z"
+  },
+  "fanNameLower": "grace"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be44"
+  },
+  "fanCode": "GRACE_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:58.512Z"
+  },
+  "fanName": "GRACE BLDC",
+  "imagePath": "uploads/fans/GRACE_BLDC/GRACE_BLDC_hero_1.jpg",
+  "images": [
+    "uploads/fans/GRACE_BLDC/GRACE_BLDC_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0056",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 517,
+    "endRow": 526
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:32:31.836Z"
+  },
+  "fanNameLower": "grace bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be45"
+  },
+  "fanCode": "GLADIATOR",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:58.878Z"
+  },
+  "fanName": "GLADIATOR",
+  "imagePath": "uploads/fans/GLADIATOR/GLADIATOR_hero_1.jpg",
+  "images": [
+    "uploads/fans/GLADIATOR/GLADIATOR_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0057",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 526,
+    "endRow": 535
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:33:16.714Z"
+  },
+  "fanNameLower": "gladiator"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be46"
+  },
+  "fanCode": "HELIOS_XL",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:59.214Z"
+  },
+  "fanName": "HELIOS XL",
+  "imagePath": "uploads/fans/HELIOS_XL/HELIOS_XL_hero_1.jpg",
+  "images": [
+    "uploads/fans/HELIOS_XL/HELIOS_XL_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "60\"",
+      "72\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0058",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 535,
+    "endRow": 544
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:33:57.092Z"
+  },
+  "fanNameLower": "helios xl"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be47"
+  },
+  "fanCode": "HURRICANE",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:59.572Z"
+  },
+  "fanName": "HURRICANE",
+  "imagePath": "uploads/fans/HURRICANE/HURRICANE_hero_1.png",
+  "images": [
+    "uploads/fans/HURRICANE/HURRICANE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0059",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 544,
+    "endRow": 553
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:34:54.428Z"
+  },
+  "fanNameLower": "hurricane"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be48"
+  },
+  "fanCode": "HUGGER_02",
+  "createdAt": {
+    "$date": "2026-02-27T13:41:59.926Z"
+  },
+  "fanName": "HUGGER 02",
+  "imagePath": "uploads/fans/HUGGER_02/HUGGER_02_hero_1.png",
+  "images": [
+    "uploads/fans/HUGGER_02/HUGGER_02_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0060",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 553,
+    "endRow": 562
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:35:57.459Z"
+  },
+  "fanNameLower": "hugger 02"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be49"
+  },
+  "fanCode": "HUGGER_02_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:00.286Z"
+  },
+  "fanName": "HUGGER 02 BLDC",
+  "imagePath": "uploads/fans/HUGGER_02_BLDC/HUGGER_02_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/HUGGER_02_BLDC/HUGGER_02_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0061",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 562,
+    "endRow": 571
+  },
+  "updatedAt": {
+    "$date": "2026-02-27T13:42:00.286Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be4a"
+  },
+  "fanCode": "HUGGER_MATRIX",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:00.596Z"
+  },
+  "fanName": "HUGGER MATRIX",
+  "imagePath": "uploads/fans/HUGGER_MATRIX/HUGGER_MATRIX_hero_1.png",
+  "images": [
+    "uploads/fans/HUGGER_MATRIX/HUGGER_MATRIX_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0062",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 571,
+    "endRow": 580
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:37:32.689Z"
+  },
+  "fanNameLower": "hugger matrix"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be4b"
+  },
+  "fanCode": "HUGGER_MATRIX_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:00.924Z"
+  },
+  "fanName": "HUGGER MATRIX BLDC",
+  "imagePath": "uploads/fans/HUGGER_MATRIX_BLDC/HUGGER_MATRIX_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/HUGGER_MATRIX_BLDC/HUGGER_MATRIX_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0063",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 580,
+    "endRow": 589
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:38:01.540Z"
+  },
+  "fanNameLower": "hugger matrix bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be4c"
+  },
+  "fanCode": "HUGGER_MAVERICK",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:01.239Z"
+  },
+  "fanName": "HUGGER MAVERICK",
+  "imagePath": "uploads/fans/HUGGER_MAVERICK/HUGGER_MAVERICK_hero_1.png",
+  "images": [
+    "uploads/fans/HUGGER_MAVERICK/HUGGER_MAVERICK_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0064",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 589,
+    "endRow": 598
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:38:46.232Z"
+  },
+  "fanNameLower": "hugger maverick"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be4d"
+  },
+  "fanCode": "HUGGER_MAVERICK_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:01.569Z"
+  },
+  "fanName": "HUGGER MAVERICK BLDC",
+  "imagePath": "uploads/fans/HUGGER_MAVERICK_BLDC/HUGGER_MAVERICK_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/HUGGER_MAVERICK_BLDC/HUGGER_MAVERICK_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0065",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 598,
+    "endRow": 607
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:39:02.318Z"
+  },
+  "fanNameLower": "hugger maverick bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be4e"
+  },
+  "fanCode": "HELIOS_MIGHTY_3_BLADE",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:01.896Z"
+  },
+  "fanName": "HELIOS MIGHTY 3 BLADE",
+  "imagePath": "uploads/fans/HELIOS_MIGHTY_3_BLADE/HELIOS_MIGHTY_3_BLADE_hero_1.png",
+  "images": [
+    "uploads/fans/HELIOS_MIGHTY_3_BLADE/HELIOS_MIGHTY_3_BLADE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "60\"",
+      "72\"",
+      "84\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0066",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 607,
+    "endRow": 643
+  },
+  "updatedAt": {
+    "$date": "2026-08-28T12:31:25.351Z"
+  },
+  "fanNameLower": "helios mighty 3 blade"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be4f"
+  },
+  "fanCode": "HENRY",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:02.284Z"
+  },
+  "fanName": "HENRY",
+  "imagePath": "uploads/fans/HENRY/HENRY_hero_1.png",
+  "images": [
+    "uploads/fans/HENRY/HENRY_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0067",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 643,
+    "endRow": 652
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:04:58.335Z"
+  },
+  "fanNameLower": "henry"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be50"
+  },
+  "fanCode": "HANA_AIR_CIRCULATOR",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:02.647Z"
+  },
+  "fanName": "HANA AIR CIRCULATOR",
+  "imagePath": "uploads/fans/HANA_AIR_CIRCULATOR/HANA_AIR_CIRCULATOR_hero_1.png",
+  "images": [
+    "uploads/fans/HANA_AIR_CIRCULATOR/HANA_AIR_CIRCULATOR_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0068",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 652,
+    "endRow": 661
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:05:21.784Z"
+  },
+  "fanNameLower": "hana air circulator"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be51"
+  },
+  "fanCode": "JADE",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:02.976Z"
+  },
+  "fanName": "JADE",
+  "imagePath": "uploads/fans/JADE/JADE_hero_1.png",
+  "images": [
+    "uploads/fans/JADE/JADE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0069",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 661,
+    "endRow": 670
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:06:12.305Z"
+  },
+  "fanNameLower": "jade"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be52"
+  },
+  "fanCode": "JADE_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:03.293Z"
+  },
+  "fanName": "JADE BLDC",
+  "imagePath": "uploads/fans/JADE_BLDC/JADE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/JADE_BLDC/JADE_BLDC_hero_1.png",
+    "uploads/fans/JADE_BLDC/JADE_BLDC_hero_2.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0070",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 670,
+    "endRow": 688
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:06:54.599Z"
+  },
+  "fanNameLower": "jade bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be53"
+  },
+  "fanCode": "JAMICA",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:03.571Z"
+  },
+  "fanName": "JAMICA",
+  "imagePath": "uploads/fans/JAMICA/JAMICA_hero_1.png",
+  "images": [
+    "uploads/fans/JAMICA/JAMICA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0071",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 688,
+    "endRow": 697
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:08:28.150Z"
+  },
+  "fanNameLower": "jamica"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be54"
+  },
+  "fanCode": "JAMICA_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:03.856Z"
+  },
+  "fanName": "JAMICA BLDC",
+  "imagePath": "uploads/fans/JAMICA_BLDC/JAMICA_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/JAMICA_BLDC/JAMICA_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0072",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 697,
+    "endRow": 706
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T05:59:57.562Z"
+  },
+  "fanNameLower": "jamica bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be55"
+  },
+  "fanCode": "FANART",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:04.126Z"
+  },
+  "fanName": "FANART",
+  "imagePath": "uploads/fans/FANART/FANART_hero_1.png",
+  "images": [
+    "uploads/fans/FANART/FANART_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "42\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0073",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 706,
+    "endRow": 715
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:30:36.007Z"
+  },
+  "fanNameLower": "fanart"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be56"
+  },
+  "fanCode": "LANTANA",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:04.475Z"
+  },
+  "fanName": "LANTANA",
+  "imagePath": "uploads/fans/LANTANA/LANTANA_hero_1.png",
+  "images": [
+    "uploads/fans/LANTANA/LANTANA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0074",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 715,
+    "endRow": 724
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:09:23.713Z"
+  },
+  "fanNameLower": "lantana"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be57"
+  },
+  "fanCode": "LANTANA_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:04.836Z"
+  },
+  "fanName": "LANTANA BLDC",
+  "imagePath": "uploads/fans/LANTANA_BLDC/LANTANA_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/LANTANA_BLDC/LANTANA_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0075",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 724,
+    "endRow": 733
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:09:46.692Z"
+  },
+  "fanNameLower": "lantana bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be58"
+  },
+  "fanCode": "LEGEND",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:05.193Z"
+  },
+  "fanName": "LEGEND",
+  "imagePath": "uploads/fans/LEGEND/LEGEND_hero_1.jpg",
+  "images": [
+    "uploads/fans/LEGEND/LEGEND_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0076",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 733,
+    "endRow": 742
+  },
+  "updatedAt": {
+    "$date": "2026-08-26T04:10:33.242Z"
+  },
+  "fanNameLower": "legend"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be59"
+  },
+  "fanCode": "LEGEND_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:05.553Z"
+  },
+  "fanName": "LEGEND BLDC",
+  "imagePath": "uploads/fans/LEGEND_BLDC/LEGEND_BLDC_hero_1.jpg",
+  "images": [
+    "uploads/fans/LEGEND_BLDC/LEGEND_BLDC_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0077",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 742,
+    "endRow": 751
+  },
+  "updatedAt": {
+    "$date": "2026-06-08T09:57:17.353Z"
+  },
+  "fanNameLower": "legend bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be5a"
+  },
+  "fanCode": "LEGEND_WITH_LIGHT_WITHOUT_BULB",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:05.934Z"
+  },
+  "fanName": "LEGEND WITH LIGHT (WITHOUT BULB)",
+  "imagePath": "uploads/fans/LEGEND_WITH_LIGHT_WITHOUT_BULB/LEGEND_WITH_LIGHT_WITHOUT_BULB_hero_1.png",
+  "images": [
+    "uploads/fans/LEGEND_WITH_LIGHT_WITHOUT_BULB/LEGEND_WITH_LIGHT_WITHOUT_BULB_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0078",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 751,
+    "endRow": 760
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:12:30.710Z"
+  },
+  "fanNameLower": "legend with light (without bulb)"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be5b"
+  },
+  "fanCode": "LEGEND_WITH_LIGHT_WITHOUT_BULB_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:06.300Z"
+  },
+  "fanName": "LEGEND WITH LIGHT (WITHOUT BULB) BLDC",
+  "imagePath": "uploads/fans/LEGEND_WITH_LIGHT_WITHOUT_BULB_BLDC/LEGEND_WITH_LIGHT_WITHOUT_BULB_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/LEGEND_WITH_LIGHT_WITHOUT_BULB_BLDC/LEGEND_WITH_LIGHT_WITHOUT_BULB_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0079",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 760,
+    "endRow": 769
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:13:20.741Z"
+  },
+  "fanNameLower": "legend with light (without bulb) bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be5c"
+  },
+  "fanCode": "MONARCH_PATRA_CHITRA",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:06.582Z"
+  },
+  "fanName": "MONARCH PATRA CHITRA",
+  "imagePath": "uploads/fans/MONARCH_PATRA_CHITRA/MONARCH_PATRA_CHITRA_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_PATRA_CHITRA/MONARCH_PATRA_CHITRA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0080",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 769,
+    "endRow": 778
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:13:52.594Z"
+  },
+  "fanNameLower": "monarch patra chitra"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be5d"
+  },
+  "fanCode": "MONARCH_PATRA_CHITRA_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:06.869Z"
+  },
+  "fanName": "MONARCH PATRA CHITRA BLDC",
+  "imagePath": "uploads/fans/MONARCH_PATRA_CHITRA_BLDC/MONARCH_PATRA_CHITRA_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_PATRA_CHITRA_BLDC/MONARCH_PATRA_CHITRA_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0081",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 778,
+    "endRow": 787
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:14:06.080Z"
+  },
+  "fanNameLower": "monarch patra chitra bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be5e"
+  },
+  "fanCode": "MONARCH_CLASSIC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:07.226Z"
+  },
+  "fanName": "MONARCH CLASSIC",
+  "imagePath": "uploads/fans/MONARCH_CLASSIC/MONARCH_CLASSIC_hero_1.jpg",
+  "images": [
+    "uploads/fans/MONARCH_CLASSIC/MONARCH_CLASSIC_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0082",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 787,
+    "endRow": 796
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:14:47.631Z"
+  },
+  "fanNameLower": "monarch classic"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be5f"
+  },
+  "fanCode": "MONARCH_CLASSIC_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:07.592Z"
+  },
+  "fanName": "MONARCH CLASSIC BLDC",
+  "imagePath": "uploads/fans/MONARCH_CLASSIC_BLDC/MONARCH_CLASSIC_BLDC_hero_1.jpg",
+  "images": [
+    "uploads/fans/MONARCH_CLASSIC_BLDC/MONARCH_CLASSIC_BLDC_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0083",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 796,
+    "endRow": 805
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:15:16.137Z"
+  },
+  "fanNameLower": "monarch classic bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be60"
+  },
+  "fanCode": "MONARCH_MOTHER_OF_PEARL",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:07.945Z"
+  },
+  "fanName": "MONARCH MOTHER OF PEARL",
+  "imagePath": "uploads/fans/MONARCH_MOTHER_OF_PEARL/MONARCH_MOTHER_OF_PEARL_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_MOTHER_OF_PEARL/MONARCH_MOTHER_OF_PEARL_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0084",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 805,
+    "endRow": 814
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:16:06.891Z"
+  },
+  "fanNameLower": "monarch mother of pearl"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be61"
+  },
+  "fanCode": "MONARCH_MOTHER_OF_PEARL_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:08.310Z"
+  },
+  "fanName": "MONARCH MOTHER OF PEARL BLDC",
+  "imagePath": "uploads/fans/MONARCH_MOTHER_OF_PEARL_BLDC/MONARCH_MOTHER_OF_PEARL_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_MOTHER_OF_PEARL_BLDC/MONARCH_MOTHER_OF_PEARL_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0085",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 814,
+    "endRow": 823
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:16:30.299Z"
+  },
+  "fanNameLower": "monarch mother of pearl bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be62"
+  },
+  "fanCode": "MONARCH_HAND_PAINTED",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:08.595Z"
+  },
+  "fanName": "MONARCH HAND PAINTED",
+  "imagePath": "uploads/fans/MONARCH_HAND_PAINTED/MONARCH_HAND_PAINTED_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_HAND_PAINTED/MONARCH_HAND_PAINTED_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0086",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 823,
+    "endRow": 832
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:16:53.414Z"
+  },
+  "fanNameLower": "monarch hand painted"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be63"
+  },
+  "fanCode": "MONARCH_HAND_PAINTED_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:08.870Z"
+  },
+  "fanName": "MONARCH HAND PAINTED BLDC",
+  "imagePath": "uploads/fans/MONARCH_HAND_PAINTED_BLDC/MONARCH_HAND_PAINTED_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_HAND_PAINTED_BLDC/MONARCH_HAND_PAINTED_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0087",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 832,
+    "endRow": 841
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:17:00.541Z"
+  },
+  "fanNameLower": "monarch hand painted bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be64"
+  },
+  "fanCode": "MONARCH_CAMEL_BONE",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:09.219Z"
+  },
+  "fanName": "MONARCH CAMEL BONE",
+  "imagePath": "uploads/fans/MONARCH_CAMEL_BONE/MONARCH_CAMEL_BONE_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_CAMEL_BONE/MONARCH_CAMEL_BONE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0088",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 841,
+    "endRow": 850
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:17:56.415Z"
+  },
+  "fanNameLower": "monarch camel bone"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be65"
+  },
+  "fanCode": "MONARCH_CAMEL_BONE_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:09.577Z"
+  },
+  "fanName": "MONARCH CAMEL BONE BLDC",
+  "imagePath": "uploads/fans/MONARCH_CAMEL_BONE_BLDC/MONARCH_CAMEL_BONE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_CAMEL_BONE_BLDC/MONARCH_CAMEL_BONE_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0089",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 850,
+    "endRow": 859
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:18:51.294Z"
+  },
+  "fanNameLower": "monarch camel bone bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be66"
+  },
+  "fanCode": "MONARCH_MYSORE_KALAM_ART",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:09.889Z"
+  },
+  "fanName": "MONARCH MYSORE KALAM ART",
+  "imagePath": "uploads/fans/MONARCH_MYSORE_KALAM_ART/MONARCH_MYSORE_KALAM_ART_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_MYSORE_KALAM_ART/MONARCH_MYSORE_KALAM_ART_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0090",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 859,
+    "endRow": 868
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:20:02.720Z"
+  },
+  "fanNameLower": "monarch mysore kalam art"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be67"
+  },
+  "fanCode": "MONARCH_MYSORE_KALAM_ART_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:10.161Z"
+  },
+  "fanName": "MONARCH MYSORE KALAM ART BLDC",
+  "imagePath": "uploads/fans/MONARCH_MYSORE_KALAM_ART_BLDC/MONARCH_MYSORE_KALAM_ART_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_MYSORE_KALAM_ART_BLDC/MONARCH_MYSORE_KALAM_ART_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0091",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 868,
+    "endRow": 877
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:20:21.707Z"
+  },
+  "fanNameLower": "monarch mysore kalam art bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be68"
+  },
+  "fanCode": "MONARCH_TANJORE",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:10.529Z"
+  },
+  "fanName": "MONARCH TANJORE",
+  "imagePath": "uploads/fans/MONARCH_TANJORE/MONARCH_TANJORE_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_TANJORE/MONARCH_TANJORE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0092",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 877,
+    "endRow": 886
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:21:09.972Z"
+  },
+  "fanNameLower": "monarch tanjore"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be69"
+  },
+  "fanCode": "MONARCH_TANJORE_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:10.883Z"
+  },
+  "fanName": "MONARCH TANJORE BLDC",
+  "imagePath": "uploads/fans/MONARCH_TANJORE_BLDC/MONARCH_TANJORE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/MONARCH_TANJORE_BLDC/MONARCH_TANJORE_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0093",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 886,
+    "endRow": 895
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:21:26.988Z"
+  },
+  "fanNameLower": "monarch tanjore bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be6a"
+  },
+  "fanCode": "MONTANA",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:11.234Z"
+  },
+  "fanName": "MONTANA",
+  "imagePath": "uploads/fans/MONTANA/MONTANA_hero_1.jpg",
+  "images": [
+    "uploads/fans/MONTANA/MONTANA_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden  blades with standard color"
+    ]
+  },
+  "productId": "FAN-0094",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 895,
+    "endRow": 904
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:22:17.130Z"
+  },
+  "fanNameLower": "montana"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be6b"
+  },
+  "fanCode": "MONTANA_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:11.581Z"
+  },
+  "fanName": "MONTANA BLDC",
+  "imagePath": "uploads/fans/MONTANA_BLDC/MONTANA_BLDC_hero_1.jpg",
+  "images": [
+    "uploads/fans/MONTANA_BLDC/MONTANA_BLDC_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden  blades with standard color"
+    ]
+  },
+  "productId": "FAN-0095",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 904,
+    "endRow": 913
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:22:37.868Z"
+  },
+  "fanNameLower": "montana bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be6c"
+  },
+  "fanCode": "MARVEL",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:11.909Z"
+  },
+  "fanName": "MARVEL",
+  "imagePath": "uploads/fans/MARVEL/MARVEL_hero_1.png",
+  "images": [
+    "uploads/fans/MARVEL/MARVEL_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\"",
+      "56\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0096",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 913,
+    "endRow": 922
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:23:12.415Z"
+  },
+  "fanNameLower": "marvel"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be6d"
+  },
+  "fanCode": "MAJESTIC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:12.235Z"
+  },
+  "fanName": "MAJESTIC",
+  "imagePath": "uploads/fans/MAJESTIC/MAJESTIC_hero_1.jpg",
+  "images": [
+    "uploads/fans/MAJESTIC/MAJESTIC_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\"",
+      "56\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0097",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 922,
+    "endRow": 931
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:23:57.595Z"
+  },
+  "fanNameLower": "majestic"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be6e"
+  },
+  "fanCode": "MAJESTIC_1945",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:12.505Z"
+  },
+  "fanName": "MAJESTIC 1945",
+  "imagePath": "uploads/fans/MAJESTIC_1945/MAJESTIC_1945_hero_1.png",
+  "images": [
+    "uploads/fans/MAJESTIC_1945/MAJESTIC_1945_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "50\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0098",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 931,
+    "endRow": 940
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:24:06.435Z"
+  },
+  "fanNameLower": "majestic 1945"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be6f"
+  },
+  "fanCode": "MOON_FACE",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:12.862Z"
+  },
+  "fanName": "MOON FACE",
+  "imagePath": "uploads/fans/MOON_FACE/MOON_FACE_hero_1.png",
+  "images": [
+    "uploads/fans/MOON_FACE/MOON_FACE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0099",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 940,
+    "endRow": 949
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:25:20.232Z"
+  },
+  "fanNameLower": "moon face"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be70"
+  },
+  "fanCode": "MUSTANG",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:13.205Z"
+  },
+  "fanName": "MUSTANG",
+  "imagePath": "uploads/fans/MUSTANG/MUSTANG_hero_1.png",
+  "images": [
+    "uploads/fans/MUSTANG/MUSTANG_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\"",
+      "56\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0100",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 949,
+    "endRow": 958
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:36:05.435Z"
+  },
+  "fanNameLower": "mustang"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be71"
+  },
+  "fanCode": "MINIO_BOMBAY_FAN",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:13.539Z"
+  },
+  "fanName": "MINIO BOMBAY FAN",
+  "imagePath": "uploads/fans/MINIO_BOMBAY_FAN/MINIO_BOMBAY_FAN_hero_1.png",
+  "images": [
+    "uploads/fans/MINIO_BOMBAY_FAN/MINIO_BOMBAY_FAN_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "12\"",
+      "16\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0101",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 958,
+    "endRow": 967
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:37:02.560Z"
+  },
+  "fanNameLower": "minio bombay fan"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be72"
+  },
+  "fanCode": "OWO",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:13.884Z"
+  },
+  "fanName": "OWO",
+  "imagePath": "uploads/fans/OWO/OWO_hero_1.png",
+  "images": [
+    "uploads/fans/OWO/OWO_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden  blades with standard color"
+    ]
+  },
+  "productId": "FAN-0102",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 967,
+    "endRow": 976
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:37:49.102Z"
+  },
+  "fanNameLower": "owo"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be73"
+  },
+  "fanCode": "PEDESTAL_METAL_WITH_BRASS_BLADES",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:14.220Z"
+  },
+  "fanName": "PEDESTAL METAL WITH BRASS BLADES",
+  "imagePath": "uploads/fans/PEDESTAL_METAL_WITH_BRASS_BLADES/PEDESTAL_METAL_WITH_BRASS_BLADES_hero_1.png",
+  "images": [
+    "uploads/fans/PEDESTAL_METAL_WITH_BRASS_BLADES/PEDESTAL_METAL_WITH_BRASS_BLADES_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "16\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0103",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 976,
+    "endRow": 985
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:38:44.533Z"
+  },
+  "fanNameLower": "pedestal metal with brass blades"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be74"
+  },
+  "fanCode": "PEDESTAL_WOODEN_BRASS",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:14.562Z"
+  },
+  "fanName": "PEDESTAL WOODEN BRASS",
+  "imagePath": "uploads/fans/PEDESTAL_WOODEN_BRASS/PEDESTAL_WOODEN_BRASS_hero_1.jpg",
+  "images": [
+    "uploads/fans/PEDESTAL_WOODEN_BRASS/PEDESTAL_WOODEN_BRASS_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "16\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0104",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 985,
+    "endRow": 994
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:39:01.866Z"
+  },
+  "fanNameLower": "pedestal wooden brass"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be75"
+  },
+  "fanCode": "PEDESTAL_TRIPOD",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:14.911Z"
+  },
+  "fanName": "PEDESTAL TRIPOD",
+  "imagePath": "uploads/fans/PEDESTAL_TRIPOD/PEDESTAL_TRIPOD_hero_1.png",
+  "images": [
+    "uploads/fans/PEDESTAL_TRIPOD/PEDESTAL_TRIPOD_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "16\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0105",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 994,
+    "endRow": 1003
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:39:15.521Z"
+  },
+  "fanNameLower": "pedestal tripod"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be76"
+  },
+  "fanCode": "RECAST",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:15.262Z"
+  },
+  "fanName": "RECAST",
+  "imagePath": "uploads/fans/RECAST/RECAST_hero_1.png",
+  "images": [
+    "uploads/fans/RECAST/RECAST_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\"",
+      "56\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0106",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1003,
+    "endRow": 1012
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:22:30.860Z"
+  },
+  "fanNameLower": "recast"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be77"
+  },
+  "fanCode": "PROPELLOR",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:15.544Z"
+  },
+  "fanName": "PROPELLOR",
+  "imagePath": "uploads/fans/PROPELLOR/PROPELLOR_hero_1.png",
+  "images": [
+    "uploads/fans/PROPELLOR/PROPELLOR_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "50\" DEFAULT",
+      "56\"",
+      "60\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0107",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1012,
+    "endRow": 1021
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:15:46.917Z"
+  },
+  "fanNameLower": "propellor"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be78"
+  },
+  "fanCode": "PICHWAI",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:15.810Z"
+  },
+  "fanName": "PICHWAI",
+  "imagePath": "uploads/fans/PICHWAI/PICHWAI_hero_1.png",
+  "images": [
+    "uploads/fans/PICHWAI/PICHWAI_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0108",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1021,
+    "endRow": 1030
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:39:36.370Z"
+  },
+  "fanNameLower": "pichwai"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be79"
+  },
+  "fanCode": "PICHWAI_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:16.081Z"
+  },
+  "fanName": "PICHWAI BLDC",
+  "imagePath": "uploads/fans/PICHWAI_BLDC/PICHWAI_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/PICHWAI_BLDC/PICHWAI_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0109",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1030,
+    "endRow": 1039
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:39:43.044Z"
+  },
+  "fanNameLower": "pichwai bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be7a"
+  },
+  "fanCode": "POLESTAR",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:16.429Z"
+  },
+  "fanName": "POLESTAR",
+  "imagePath": "uploads/fans/POLESTAR/POLESTAR_hero_1.png",
+  "images": [
+    "uploads/fans/POLESTAR/POLESTAR_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "50\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0110",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1039,
+    "endRow": 1048
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:40:11.562Z"
+  },
+  "fanNameLower": "polestar"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be7b"
+  },
+  "fanCode": "POLESTAR_IP_64_METAL_BLADE__WOODEN_BLADE",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:16.774Z"
+  },
+  "fanName": "POLESTAR  IP 64 METAL BLADE / WOODEN  BLADE",
+  "imagePath": "uploads/fans/POLESTAR_IP_64_METAL_BLADE__WOODEN_BLADE/POLESTAR_IP_64_METAL_BLADE__WOODEN_BLADE_hero_1.png",
+  "images": [
+    "uploads/fans/POLESTAR_IP_64_METAL_BLADE__WOODEN_BLADE/POLESTAR_IP_64_METAL_BLADE__WOODEN_BLADE_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "50\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0111",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1048,
+    "endRow": 1057
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:44:12.458Z"
+  },
+  "fanNameLower": "polestar  ip 64 metal blade / wooden  blade"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be7c"
+  },
+  "fanCode": "REVIVAL",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:17.133Z"
+  },
+  "fanName": "REVIVAL",
+  "imagePath": "uploads/fans/REVIVAL/REVIVAL_hero_1.png",
+  "images": [
+    "uploads/fans/REVIVAL/REVIVAL_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0112",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1057,
+    "endRow": 1066
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:23:18.233Z"
+  },
+  "fanNameLower": "revival"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be7d"
+  },
+  "fanCode": "RELIC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:17.473Z"
+  },
+  "fanName": "RELIC",
+  "imagePath": "uploads/fans/RELIC/RELIC_hero_1.png",
+  "images": [
+    "uploads/fans/RELIC/RELIC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors",
+      "Wooden blades with standard color"
+    ]
+  },
+  "productId": "FAN-0113",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1066,
+    "endRow": 1075
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:24:05.853Z"
+  },
+  "fanNameLower": "relic"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be7e"
+  },
+  "fanCode": "REGALLIA",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:17.818Z"
+  },
+  "fanName": "REGALLIA",
+  "imagePath": "uploads/fans/REGALLIA/REGALLIA_hero_1.png",
+  "images": [
+    "uploads/fans/REGALLIA/REGALLIA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0114",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1075,
+    "endRow": 1084
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:26:48.307Z"
+  },
+  "fanNameLower": "regallia"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be7f"
+  },
+  "fanCode": "REGALLIA_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:18.169Z"
+  },
+  "fanName": "REGALLIA BLDC",
+  "imagePath": "uploads/fans/REGALLIA_BLDC/REGALLIA_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/REGALLIA_BLDC/REGALLIA_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0115",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1084,
+    "endRow": 1093
+  },
+  "updatedAt": {
+    "$date": "2026-06-08T09:52:19.791Z"
+  },
+  "fanNameLower": "regallia bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be80"
+  },
+  "fanCode": "REVIVAL_DLX",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:18.438Z"
+  },
+  "fanName": "REVIVAL DLX",
+  "imagePath": "uploads/fans/REVIVAL_DLX/REVIVAL_DLX_hero_1.png",
+  "images": [
+    "uploads/fans/REVIVAL_DLX/REVIVAL_DLX_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0116",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1093,
+    "endRow": 1102
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:34:25.146Z"
+  },
+  "fanNameLower": "revival dlx"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be81"
+  },
+  "fanCode": "SAPPHIRE",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:18.787Z"
+  },
+  "fanName": "SAPPHIRE",
+  "imagePath": "uploads/fans/SAPPHIRE/SAPPHIRE_hero_1.jpg",
+  "images": [
+    "uploads/fans/SAPPHIRE/SAPPHIRE_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0117",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1102,
+    "endRow": 1111
+  },
+  "updatedAt": {
+    "$date": "2026-08-26T05:12:06.735Z"
+  },
+  "fanNameLower": "sapphire"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be82"
+  },
+  "fanCode": "SHALIMAR_ANTIQUE_SILVER",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:19.140Z"
+  },
+  "fanName": "SHALIMAR ANTIQUE SILVER",
+  "imagePath": "uploads/fans/SHALIMAR_ANTIQUE_SILVER/SHALIMAR_ANTIQUE_SILVER_hero_1.jpg",
+  "images": [
+    "uploads/fans/SHALIMAR_ANTIQUE_SILVER/SHALIMAR_ANTIQUE_SILVER_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0118",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1111,
+    "endRow": 1120
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:36:27.912Z"
+  },
+  "fanNameLower": "shalimar antique silver"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be83"
+  },
+  "fanCode": "SHALIMAR_ANTIQUE_SILVER_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:19.498Z"
+  },
+  "fanName": "SHALIMAR ANTIQUE SILVER BLDC",
+  "imagePath": "uploads/fans/SHALIMAR_ANTIQUE_SILVER_BLDC/SHALIMAR_ANTIQUE_SILVER_BLDC_hero_1.jpg",
+  "images": [
+    "uploads/fans/SHALIMAR_ANTIQUE_SILVER_BLDC/SHALIMAR_ANTIQUE_SILVER_BLDC_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0119",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1120,
+    "endRow": 1129
+  },
+  "updatedAt": {
+    "$date": "2026-06-08T09:58:40.785Z"
+  },
+  "fanNameLower": "shalimar antique silver bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be84"
+  },
+  "fanCode": "SHALIMAR_LEAF",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:19.777Z"
+  },
+  "fanName": "SHALIMAR LEAF",
+  "imagePath": "uploads/fans/SHALIMAR_LEAF/SHALIMAR_LEAF_hero_1.jpg",
+  "images": [
+    "uploads/fans/SHALIMAR_LEAF/SHALIMAR_LEAF_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\" DEFAULT",
+      "40\"",
+      "42\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0120",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1129,
+    "endRow": 1138
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:37:55.454Z"
+  },
+  "fanNameLower": "shalimar leaf"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be85"
+  },
+  "fanCode": "SHALIMAR_LEAF_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:20.057Z"
+  },
+  "fanName": "SHALIMAR LEAF BLDC",
+  "imagePath": "uploads/fans/SHALIMAR_LEAF_BLDC/SHALIMAR_LEAF_BLDC_hero_1.jpg",
+  "images": [
+    "uploads/fans/SHALIMAR_LEAF_BLDC/SHALIMAR_LEAF_BLDC_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\" DEFAULT",
+      "40\"",
+      "42\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0121",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1138,
+    "endRow": 1147
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:38:16.522Z"
+  },
+  "fanNameLower": "shalimar leaf bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be86"
+  },
+  "fanCode": "SHALIMAR_HAND_PAINTED",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:20.418Z"
+  },
+  "fanName": "SHALIMAR HAND PAINTED",
+  "imagePath": "uploads/fans/SHALIMAR_HAND_PAINTED/SHALIMAR_HAND_PAINTED_hero_1.png",
+  "images": [
+    "uploads/fans/SHALIMAR_HAND_PAINTED/SHALIMAR_HAND_PAINTED_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0122",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1147,
+    "endRow": 1156
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:39:02.130Z"
+  },
+  "fanNameLower": "shalimar hand painted"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be87"
+  },
+  "fanCode": "SHALIMAR_HAND_PAINTED_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:21.314Z"
+  },
+  "fanName": "SHALIMAR HAND PAINTED BLDC",
+  "imagePath": "uploads/fans/SHALIMAR_HAND_PAINTED_BLDC/SHALIMAR_HAND_PAINTED_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/SHALIMAR_HAND_PAINTED_BLDC/SHALIMAR_HAND_PAINTED_BLDC_hero_1.png",
+    "uploads/fans/SHALIMAR_HAND_PAINTED_BLDC/SHALIMAR_HAND_PAINTED_BLDC_hero_2.png",
+    "uploads/fans/SHALIMAR_HAND_PAINTED_BLDC/SHALIMAR_HAND_PAINTED_BLDC_hero_3.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0123",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1156,
+    "endRow": 1183
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:40:45.497Z"
+  },
+  "fanNameLower": "shalimar hand painted bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be88"
+  },
+  "fanCode": "SHIVOM",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:21.666Z"
+  },
+  "fanName": "SHIVOM",
+  "imagePath": "uploads/fans/SHIVOM/SHIVOM_hero_1.png",
+  "images": [
+    "uploads/fans/SHIVOM/SHIVOM_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "12\"",
+      "16\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0124",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1183,
+    "endRow": 1192
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:42:15.504Z"
+  },
+  "fanNameLower": "shivom"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be89"
+  },
+  "fanCode": "SHALIMAR_CANE_LEAF",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:21.939Z"
+  },
+  "fanName": "SHALIMAR CANE LEAF",
+  "imagePath": "uploads/fans/SHALIMAR_CANE_LEAF/SHALIMAR_CANE_LEAF_hero_1.png",
+  "images": [
+    "uploads/fans/SHALIMAR_CANE_LEAF/SHALIMAR_CANE_LEAF_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\" DEFAULT",
+      "40\"",
+      "42\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0125",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1192,
+    "endRow": 1201
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:42:45.841Z"
+  },
+  "fanNameLower": "shalimar cane leaf"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be8a"
+  },
+  "fanCode": "SHALIMAR_CANE_LEAF_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:22.214Z"
+  },
+  "fanName": "SHALIMAR CANE LEAF BLDC",
+  "imagePath": "uploads/fans/SHALIMAR_CANE_LEAF_BLDC/SHALIMAR_CANE_LEAF_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/SHALIMAR_CANE_LEAF_BLDC/SHALIMAR_CANE_LEAF_BLDC_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\" DEFAULT",
+      "40\"",
+      "42\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0126",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1201,
+    "endRow": 1210
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:43:16.467Z"
+  },
+  "fanNameLower": "shalimar cane leaf bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be8b"
+  },
+  "fanCode": "SHALIMAR_SANGANERI_LEAF",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:22.501Z"
+  },
+  "fanName": "SHALIMAR SANGANERI LEAF",
+  "imagePath": "uploads/fans/SHALIMAR_SANGANERI_LEAF/SHALIMAR_SANGANERI_LEAF_hero_1.png",
+  "images": [
+    "uploads/fans/SHALIMAR_SANGANERI_LEAF/SHALIMAR_SANGANERI_LEAF_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\" DEFAULT",
+      "40\"",
+      "42\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0127",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1210,
+    "endRow": 1219
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:43:40.303Z"
+  },
+  "fanNameLower": "shalimar sanganeri leaf"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be8c"
+  },
+  "fanCode": "SHALIMAR_SANGANERI_LEAF_BLDC",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:22.774Z"
+  },
+  "fanName": "SHALIMAR SANGANERI LEAF BLDC",
+  "imagePath": "uploads/fans/SHALIMAR_SANGANERI_LEAF_BLDC/SHALIMAR_SANGANERI_LEAF_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/SHALIMAR_SANGANERI_LEAF_BLDC/SHALIMAR_SANGANERI_LEAF_BLDC_hero_1.png",
+    "uploads/fans/SHALIMAR_SANGANERI_LEAF_BLDC/SHALIMAR_SANGANERI_LEAF_BLDC_hero_2.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\" DEFAULT",
+      "40\"",
+      "42\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0128",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1219,
+    "endRow": 1237
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:43:58.422Z"
+  },
+  "fanNameLower": "shalimar sanganeri leaf bldc"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be8d"
+  },
+  "fanCode": "TURBO_TWIN",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:23.089Z"
+  },
+  "fanName": "TURBO TWIN",
+  "imagePath": "uploads/fans/TURBO_TWIN/TURBO_TWIN_hero_1.png",
+  "images": [
+    "uploads/fans/TURBO_TWIN/TURBO_TWIN_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "30\"",
+      "34\"",
+      "36\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0129",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1237,
+    "endRow": 1246
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:45:04.690Z"
+  },
+  "fanNameLower": "turbo twin"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be8e"
+  },
+  "fanCode": "TAHITI",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:23.439Z"
+  },
+  "fanName": "TAHITI",
+  "imagePath": "uploads/fans/TAHITI/TAHITI_hero_1.png",
+  "images": [
+    "uploads/fans/TAHITI/TAHITI_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0130",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1246,
+    "endRow": 1255
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:45:53.511Z"
+  },
+  "fanNameLower": "tahiti"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be8f"
+  },
+  "fanCode": "TABLE_FAN_BRASS",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:23.795Z"
+  },
+  "fanName": "TABLE FAN BRASS",
+  "imagePath": "uploads/fans/TABLE_FAN_BRASS/TABLE_FAN_BRASS_hero_1.png",
+  "images": [
+    "uploads/fans/TABLE_FAN_BRASS/TABLE_FAN_BRASS_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "16\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0131",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1255,
+    "endRow": 1264
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:46:24.812Z"
+  },
+  "fanNameLower": "table fan brass"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be90"
+  },
+  "fanCode": "VICTOR",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:24.157Z"
+  },
+  "fanName": "VICTOR",
+  "imagePath": "uploads/fans/VICTOR/VICTOR_hero_1.jpg",
+  "images": [
+    "uploads/fans/VICTOR/VICTOR_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0132",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1264,
+    "endRow": 1273
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:47:08.346Z"
+  },
+  "fanNameLower": "victor"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be91"
+  },
+  "fanCode": "VIRAJ",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:24.487Z"
+  },
+  "fanName": "VIRAJ",
+  "imagePath": "uploads/fans/VIRAJ/VIRAJ_hero_1.png",
+  "images": [
+    "uploads/fans/VIRAJ/VIRAJ_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0133",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1273,
+    "endRow": 1282
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:47:48.545Z"
+  },
+  "fanNameLower": "viraj"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be92"
+  },
+  "fanCode": "WALL_FAN_BRASS_BLADES",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:24.814Z"
+  },
+  "fanName": "WALL FAN BRASS BLADES",
+  "imagePath": "uploads/fans/WALL_FAN_BRASS_BLADES/WALL_FAN_BRASS_BLADES_hero_1.jpg",
+  "images": [
+    "uploads/fans/WALL_FAN_BRASS_BLADES/WALL_FAN_BRASS_BLADES_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "12\"",
+      "16\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0134",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1282,
+    "endRow": 1291
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:49:03.473Z"
+  },
+  "fanNameLower": "wall fan brass blades"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be93"
+  },
+  "fanCode": "VISTARA",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:25.087Z"
+  },
+  "fanName": "VISTARA",
+  "imagePath": "uploads/fans/VISTARA/VISTARA_hero_1.png",
+  "images": [
+    "uploads/fans/VISTARA/VISTARA_hero_1.png"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0135",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1291,
+    "endRow": 1300
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:48:18.284Z"
+  },
+  "fanNameLower": "vistara"
+},
+{
+  "_id": {
+    "$oid": "69a19f41ff806453e3d9be94"
+  },
+  "fanCode": "VINTAGE_1920",
+  "createdAt": {
+    "$date": "2026-02-27T13:42:25.372Z"
+  },
+  "fanName": "VINTAGE 1920",
+  "imagePath": "uploads/fans/VINTAGE_1920/VINTAGE_1920_hero_1.jpg",
+  "images": [
+    "uploads/fans/VINTAGE_1920/VINTAGE_1920_hero_1.jpg"
+  ],
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "productId": "FAN-0136",
+  "source": {
+    "sheet": "Sheet1",
+    "startRow": 1300,
+    "endRow": 1309
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:48:36.032Z"
+  },
+  "fanNameLower": "vintage 1920"
+},
+{
+  "_id": {
+    "$oid": "69fc5ed1d4f05c2369dfa963"
+  },
+  "productId": "FAN-0137",
+  "fanCode": "SOVERIEGN",
+  "fanName": "SOVERIEGN",
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-07T09:43:45.400Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:44:37.625Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/SOVERIEGN/SOVERIEGN_hero_1.png",
+  "images": [
+    "uploads/fans/SOVERIEGN/SOVERIEGN_hero_1.png"
+  ],
+  "fanNameLower": "soveriegn"
+},
+{
+  "_id": {
+    "$oid": "69fdbc3155be9717d265f719"
+  },
+  "productId": "FAN-0138",
+  "fanCode": "CURVE",
+  "fanName": "CURVE",
+  "optionDefinitions": {
+    "bladeSize": [
+      "52'' DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-08T10:34:25.407Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T15:20:01.915Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/CURVE/CURVE_hero_1.png",
+  "images": [
+    "uploads/fans/CURVE/CURVE_hero_1.png"
+  ],
+  "fanNameLower": "curve"
+},
+{
+  "_id": {
+    "$oid": "69fdbd2dd4f05c2369dfa976"
+  },
+  "productId": "FAN-0139",
+  "fanCode": "CURVE_HUGGER",
+  "fanName": "CURVE HUGGER",
+  "optionDefinitions": {
+    "bladeSize": [
+      "52\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-08T10:38:37.380Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T15:20:30.585Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/CURVE_HUGGER/CURVE_HUGGER_hero_1.jpeg",
+  "images": [
+    "uploads/fans/CURVE_HUGGER/CURVE_HUGGER_hero_1.jpeg"
+  ],
+  "fanNameLower": "curve hugger"
+},
+{
+  "_id": {
+    "$oid": "69fdbeea55be9717d265f71c"
+  },
+  "productId": "FAN-0140",
+  "fanCode": "AIRFOIL",
+  "fanName": "AIRFOIL",
+  "optionDefinitions": {
+    "bladeSize": [
+      "52\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-08T10:46:02.177Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:13:00.530Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/AIRFOIL/AIRFOIL_hero_1.png",
+  "images": [
+    "uploads/fans/AIRFOIL/AIRFOIL_hero_1.png"
+  ],
+  "fanNameLower": "airfoil"
+},
+{
+  "_id": {
+    "$oid": "69fdc096d4f05c2369dfa979"
+  },
+  "productId": "FAN-0141",
+  "fanCode": "AIRFOIL_HUGGER",
+  "fanName": "AIRFOIL HUGGER",
+  "optionDefinitions": {
+    "bladeSize": [
+      "52\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-08T10:53:10.977Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:13:11.687Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/AIRFOIL_HUGGER/AIRFOIL_HUGGER_hero_1.png",
+  "images": [
+    "uploads/fans/AIRFOIL_HUGGER/AIRFOIL_HUGGER_hero_1.png"
+  ],
+  "fanNameLower": "airfoil hugger"
+},
+{
+  "_id": {
+    "$oid": "69fdc15355be9717d265f71f"
+  },
+  "productId": "FAN-0142",
+  "fanCode": "PADDLE_HUGGER",
+  "fanName": "PADDLE HUGGER",
+  "optionDefinitions": {
+    "bladeSize": [
+      "52\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-08T10:56:19.700Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:38:20.458Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/PADDLE_HUGGER/PADDLE_HUGGER_hero_1.png",
+  "images": [
+    "uploads/fans/PADDLE_HUGGER/PADDLE_HUGGER_hero_1.png"
+  ],
+  "fanNameLower": "paddle hugger"
+},
+{
+  "_id": {
+    "$oid": "69fdc84f55be9717d265f722"
+  },
+  "productId": "FAN-0143",
+  "fanCode": "PADDLE",
+  "fanName": "PADDLE",
+  "optionDefinitions": {
+    "bladeSize": [
+      "52\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-08T11:26:07.216Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:38:12.201Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/PADDLE/PADDLE_hero_1.png",
+  "images": [
+    "uploads/fans/PADDLE/PADDLE_hero_1.png"
+  ],
+  "fanNameLower": "paddle"
+},
+{
+  "_id": {
+    "$oid": "6a018546ea7b499b2c3dc854"
+  },
+  "productId": "FAN-0144",
+  "fanCode": "JAZZ_HVLS",
+  "fanName": "JAZZ HVLS",
+  "optionDefinitions": {
+    "bladeSize": [
+      "72\" DEFAULT",
+      "84\"",
+      "96\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-11T07:29:10.071Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:07:44.627Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/JAZZ_HVLS/JAZZ_HVLS_hero_1.png",
+  "images": [
+    "uploads/fans/JAZZ_HVLS/JAZZ_HVLS_hero_1.png"
+  ],
+  "fanNameLower": "jazz hvls"
+},
+{
+  "_id": {
+    "$oid": "6a01c7800d9385a2485268b0"
+  },
+  "productId": "FAN-0145",
+  "fanCode": "HELIOS_4_BLADE",
+  "fanName": "HELIOS 4 BLADE",
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\"",
+      "56\"",
+      "60\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-11T12:11:44.590Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T06:41:03.622Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/HELIOS_4_BLADE/HELIOS_4_BLADE_hero_1.png",
+  "images": [
+    "uploads/fans/HELIOS_4_BLADE/HELIOS_4_BLADE_hero_1.png"
+  ],
+  "fanNameLower": "helios 4 blade"
+},
+{
+  "_id": {
+    "$oid": "6a01c8e8b886b465e4bc6457"
+  },
+  "productId": "FAN-0146",
+  "fanCode": "HELIOS_5_BLADE",
+  "fanName": "HELIOS 5 BLADE",
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\"",
+      "56\"",
+      "60\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-11T12:17:44.021Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:03:45.486Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/HELIOS_5_BLADE/HELIOS_5_BLADE_hero_1.png",
+  "images": [
+    "uploads/fans/HELIOS_5_BLADE/HELIOS_5_BLADE_hero_1.png"
+  ],
+  "fanNameLower": "helios 5 blade"
+},
+{
+  "_id": {
+    "$oid": "6a01ca000d9385a2485268bc"
+  },
+  "productId": "FAN-0147",
+  "fanCode": "HELIOS_6_BLADE",
+  "fanName": "HELIOS 6 BLADE",
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\"",
+      "56\"",
+      "60\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-11T12:22:24.566Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:04:22.477Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/HELIOS_6_BLADE/HELIOS_6_BLADE_hero_1.png",
+  "images": [
+    "uploads/fans/HELIOS_6_BLADE/HELIOS_6_BLADE_hero_1.png"
+  ],
+  "fanNameLower": "helios 6 blade"
+},
+{
+  "_id": {
+    "$oid": "6a01d8400d9385a2485268c8"
+  },
+  "productId": "FAN-0148",
+  "fanCode": "BELLO",
+  "fanName": "BELLO",
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "50\" DEFAULT",
+      "60\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-11T13:23:12.451Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T05:41:55.020Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/BELLO/BELLO_hero_1.png",
+  "images": [
+    "uploads/fans/BELLO/BELLO_hero_1.png"
+  ],
+  "fanNameLower": "bello"
+},
+{
+  "_id": {
+    "$oid": "6a01e4a8b886b465e4bc6463"
+  },
+  "productId": "FAN-0149",
+  "fanCode": "DIVA_HERITAGE",
+  "fanName": "DIVA HERITAGE",
+  "optionDefinitions": {
+    "bladeSize": [
+      "50\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-11T14:16:08.442Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T06:15:31.793Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/DIVA_HERITAGE/DIVA_HERITAGE_hero_1.jpeg",
+  "images": [
+    "uploads/fans/DIVA_HERITAGE/DIVA_HERITAGE_hero_1.jpeg"
+  ],
+  "fanNameLower": "diva heritage"
+},
+{
+  "_id": {
+    "$oid": "6a0435070d9385a2485268d2"
+  },
+  "productId": "FAN-0150",
+  "fanCode": "SHALIMAR_CANE",
+  "fanName": "SHALIMAR CANE",
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-13T08:23:35.859Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:41:11.941Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/SHALIMAR_CANE/SHALIMAR_CANE_hero_1.png",
+  "images": [
+    "uploads/fans/SHALIMAR_CANE/SHALIMAR_CANE_hero_1.png"
+  ],
+  "fanNameLower": "shalimar cane"
+},
+{
+  "_id": {
+    "$oid": "6a04358db886b465e4bc646a"
+  },
+  "productId": "FAN-0151",
+  "fanCode": "SHALIMAR_CANE_BLDC",
+  "fanName": "SHALIMAR CANE BLDC",
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-05-13T08:25:49.980Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T08:41:26.416Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/SHALIMAR_CANE_BLDC/SHALIMAR_CANE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/SHALIMAR_CANE_BLDC/SHALIMAR_CANE_BLDC_hero_1.png"
+  ],
+  "fanNameLower": "shalimar cane bldc"
+},
+{
+  "_id": {
+    "$oid": "6a227bec4d19ca265c84606b"
+  },
+  "productId": "FAN-0152",
+  "fanCode": "MOON_FACE_METAL",
+  "fanName": "MOON FACE METAL",
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-06-05T07:34:04.538Z"
+  },
+  "updatedAt": {
+    "$date": "2026-06-05T07:34:04.538Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/MOON_FACE_METAL/MOON_FACE_METAL_hero_1.png",
+  "images": [
+    "uploads/fans/MOON_FACE_METAL/MOON_FACE_METAL_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8da8424a13e33a834025b2"
+  },
+  "productId": "FAN-0153",
+  "fanCode": "AIRFOIL_BLDC",
+  "fanName": "AIRFOIL BLDC",
+  "optionDefinitions": {
+    "bladeSize": [
+      "52\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-25T14:35:46.466Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T14:35:46.466Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/AIRFOIL_BLDC/AIRFOIL_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/AIRFOIL_BLDC/AIRFOIL_BLDC_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8da93adc9c221722d50fd0"
+  },
+  "productId": "FAN-0154",
+  "fanCode": "AIRFOIL_HUGGER_BLDC",
+  "fanName": "AIRFOIL HUGGER BLDC",
+  "optionDefinitions": {
+    "bladeSize": [
+      "52\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-25T14:39:54.440Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T14:39:54.441Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/AIRFOIL_HUGGER_BLDC/AIRFOIL_HUGGER_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/AIRFOIL_HUGGER_BLDC/AIRFOIL_HUGGER_BLDC_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8dac399721044139476904"
+  },
+  "productId": "FAN-0155",
+  "fanCode": "BASIL_HUGGER",
+  "fanName": "BASIL HUGGER",
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-25T14:52:41.803Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T14:52:41.803Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/BASIL_HUGGER/BASIL_HUGGER_hero_1.png",
+  "images": [
+    "uploads/fans/BASIL_HUGGER/BASIL_HUGGER_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8daca6dc9c221722d50fd3"
+  },
+  "productId": "FAN-0156",
+  "fanCode": "BASIL_HUGGER_BLDC",
+  "fanName": "BASIL HUGGER BLDC",
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blad",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-25T14:54:30.206Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T14:54:30.206Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/BASIL_HUGGER_BLDC/BASIL_HUGGER_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/BASIL_HUGGER_BLDC/BASIL_HUGGER_BLDC_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8db08d972104413947690d"
+  },
+  "productId": "FAN-0157",
+  "fanCode": "CROWN_VINTAGE_BLDC",
+  "fanName": "CROWN VINTAGE BLDC",
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard color ( WITH METAL BLADE SWEEP DESIGN CHANGE )",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-25T15:11:09.540Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-25T15:11:09.540Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/CROWN_VINTAGE_BLDC/CROWN_VINTAGE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/CROWN_VINTAGE_BLDC/CROWN_VINTAGE_BLDC_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8db7699721044139476914"
+  },
+  "productId": "FAN-0158",
+  "fanCode": "HERITAGE_HUGGER",
+  "fanName": "HERITAGE HUGGER",
+  "optionDefinitions": {
+    "bladeSize": [
+      "24\"",
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-25T15:40:25.509Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T06:08:08.961Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/HERITAGE_HUGGER/HERITAGE_HUGGER_hero_1.png",
+  "images": [
+    "uploads/fans/HERITAGE_HUGGER/HERITAGE_HUGGER_hero_1.png"
+  ],
+  "fanNameLower": "heritage hugger"
+},
+{
+  "_id": {
+    "$oid": "6a8db7d5dc9c221722d50fd7"
+  },
+  "productId": "FAN-0159",
+  "fanCode": "HERITAGE_HUGGER_BLDC",
+  "fanName": "HERITAGE HUGGER BLDC",
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-25T15:42:13.947Z"
+  },
+  "updatedAt": {
+    "$date": "2026-09-11T06:16:47.958Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/HERITAGE_HUGGER_BLDC/HERITAGE_HUGGER_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/HERITAGE_HUGGER_BLDC/HERITAGE_HUGGER_BLDC_hero_1.png"
+  ],
+  "fanNameLower": "heritage hugger bldc"
+},
+{
+  "_id": {
+    "$oid": "6a8e65f8011cadb1be6abad6"
+  },
+  "productId": "FAN-0160",
+  "fanCode": "JUPITER_4_BLADES",
+  "fanName": "JUPITER 4 BLADES",
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\"",
+      "56\"",
+      "60\"",
+      "72\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-26T04:05:12.303Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-26T04:05:12.303Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/JUPITER_4_BLADES/JUPITER_4_BLADES_hero_1.png",
+  "images": [
+    "uploads/fans/JUPITER_4_BLADES/JUPITER_4_BLADES_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8e66a29559a1721a769e97"
+  },
+  "productId": "FAN-0161",
+  "fanCode": "JUPITER_6_BLADES",
+  "fanName": "JUPITER 6 BLADES",
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\"",
+      "56\"",
+      "60\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-26T04:08:02.917Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-26T04:08:02.917Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/JUPITER_6_BLADES/JUPITER_6_BLADES_hero_1.png",
+  "images": [
+    "uploads/fans/JUPITER_6_BLADES/JUPITER_6_BLADES_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8e6ba5011cadb1be6abadf"
+  },
+  "productId": "FAN-0162",
+  "fanCode": "OCTAVE_HUGGER",
+  "fanName": "OCTAVE HUGGER",
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium blades with standard color",
+      "Allumunium laminate wooden blade",
+      "Standard colors with wodden blades"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-26T04:29:25.958Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-26T04:29:25.958Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/OCTAVE_HUGGER/OCTAVE_HUGGER_hero_1.png",
+  "images": [
+    "uploads/fans/OCTAVE_HUGGER/OCTAVE_HUGGER_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8e6da8db01fc4d57ff41d9"
+  },
+  "productId": "FAN-0163",
+  "fanCode": "PADDLE_BLDC",
+  "fanName": "PADDLE BLDC",
+  "optionDefinitions": {
+    "bladeSize": [
+      "52\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-26T04:38:00.487Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-26T04:38:00.487Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/PADDLE_BLDC/PADDLE_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/PADDLE_BLDC/PADDLE_BLDC_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8e6e3e9559a1721a769eaa"
+  },
+  "productId": "FAN-0164",
+  "fanCode": "PADDLE_HUGGER_BLDC",
+  "fanName": "PADDLE HUGGER BLDC",
+  "optionDefinitions": {
+    "bladeSize": [
+      "52\" DEFAULT"
+    ],
+    "fanType": [
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-26T04:40:30.741Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-26T04:40:30.741Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/PADDLE_HUGGER_BLDC/PADDLE_HUGGER_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/PADDLE_HUGGER_BLDC/PADDLE_HUGGER_BLDC_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8e71d779f9069b842702b9"
+  },
+  "productId": "FAN-0165",
+  "fanCode": "RATTAN_HUGGER",
+  "fanName": "RATTAN HUGGER",
+  "optionDefinitions": {
+    "bladeSize": [
+      "36\"",
+      "48\" DEFAULT",
+      "52\""
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-26T04:55:51.144Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-26T04:55:51.144Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/RATTAN_HUGGER/RATTAN_HUGGER_hero_1.png",
+  "images": [
+    "uploads/fans/RATTAN_HUGGER/RATTAN_HUGGER_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8e726579f9069b842702c0"
+  },
+  "productId": "FAN-0166",
+  "fanCode": "RATTAN_HUGGER_BLDC",
+  "fanName": "RATTAN HUGGER BLDC",
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-26T04:58:13.292Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-26T04:58:13.292Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/RATTAN_HUGGER_BLDC/RATTAN_HUGGER_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/RATTAN_HUGGER_BLDC/RATTAN_HUGGER_BLDC_hero_1.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6a8e77f779f9069b842702c3"
+  },
+  "productId": "FAN-0167",
+  "fanCode": "VIRAJ_BLDC",
+  "fanName": "VIRAJ BLDC",
+  "optionDefinitions": {
+    "bladeSize": [
+      "48\" DEFAULT"
+    ],
+    "fanType": [
+      "Allumunium laminate wooden blade",
+      "Standard colors"
+    ]
+  },
+  "createdAt": {
+    "$date": "2026-08-26T05:21:59.281Z"
+  },
+  "updatedAt": {
+    "$date": "2026-08-26T05:21:59.281Z"
+  },
+  "isActive": true,
+  "imagePath": "uploads/fans/VIRAJ_BLDC/VIRAJ_BLDC_hero_1.png",
+  "images": [
+    "uploads/fans/VIRAJ_BLDC/VIRAJ_BLDC_hero_1.png"
+  ]
+}]

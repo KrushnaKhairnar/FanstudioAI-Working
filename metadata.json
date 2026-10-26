@@ -1,0 +1,6 @@
+{
+  "name": "FanStudioAI",
+  "description": "AI-powered ceiling-fan visualization platform and catalog management system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

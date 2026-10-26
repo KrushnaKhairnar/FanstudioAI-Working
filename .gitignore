@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.venv/
+__pycache__/
+*.pyc
+data/mongodb/
+data/mongita/
+uploads/
+data/rooms/
+data/visualizations/
+.env*
+!.env.example

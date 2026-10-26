@@ -1,0 +1,6 @@
+  uploads/
+
+  public/assets/aistudio/
+  .venv/
+  node_modules/
+  __pycache__/
